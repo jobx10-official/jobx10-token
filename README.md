@@ -1,97 +1,134 @@
-📘 JobX10 Token (JX10) – Official Repository
+# JX10 Token (JobX10) – Official Repository
 
-Welcome to the official GitHub repository of the JobX10 Token (JX10) – a community-driven utility token built on the Polygon (PoS) blockchain.
+Welcome to the official repository of the **JX10 Token**, a utility token powering the **JobX10 ecosystem**.  
+JX10 operates on the **Polygon (PoS)** blockchain and enables digital payments, rewards and service access within the JobX10 platform.
 
-This repository contains the smart contract, documentation, token metadata, logo files, and other essential resources for the JobX10 ecosystem.
+---
 
-🔗 Contract Information
-Property	Value
-Token Name	JobX10
-Ticker	JX10
-Network	Polygon (PoS)
-Contract Address	0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
-Decimals	18
-Standard	ERC-20
-🧩 Project Utility
+## 🔗 Contract Information
 
-JX10 supports the growing JobX10 ecosystem, providing utility for:
+| Property | Value |
+|---------|-------|
+| **Name** | JobX10 |
+| **Symbol** | JX10 |
+| **Type** | ERC-20 |
+| **Decimals** | 18 |
+| **Network** | Polygon (PoS) |
+| **Contract Address** | `0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1` |
 
-Access to training and coaching programs
+PolygonScan:  
+https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
 
-Payment for JobX10 services
+---
 
-Community rewards
+## 🎯 Project Mission
 
-Marketplace usage
+The JobX10 ecosystem empowers:
 
-Staking & governance (future development)
+- Job seekers  
+- Coaching participants  
+- Freelancers & self-employed professionals  
+- Companies  
+- The JX10 community  
+- Investors & token holders  
 
-📁 Repository Structure
-/contracts      → Smart contract files
-/docs           → Documentation, tokenomics, roadmap
-/logo           → Token logo files (PNG, SVG)
-/metadata       → CoinGecko/CMC metadata files
-/whitepaper     → Whitepaper and research documents
+---
 
-📄 Whitepaper
+## 🪙 Token Utility
 
-The official JobX10 Whitepaper v1.0 will be published here soon in /whitepaper.
+The JX10 token provides utility for:
 
-📊 Tokenomics Overview
+- **Payments for coaching programs**  
+- **Discounts on JobX10 services**  
+- **Community rewards**  
+- Access to **JobX10 premium content**  
+- Future partner integrations (2026+)
 
-Total Supply: 1,000,000,000 JX10
+---
 
-Blockchain: Polygon
+## 📊 Tokenomics Overview (Official & Final)
 
-Liquidity: Public on DEXs (QuickSwap, UniSwap)
+**Total Supply: 1,000,000,000 JX10**  
+*(Non-inflationary, fixed supply)*
 
-No hidden minting
+| Allocation            | %    | Tokens          |
+|----------------------|------|-----------------|
+| Liquidity Pool       | 55%  | 550,000,000     |
+| Founder Allocation   | 10%  | 100,000,000     |
+| Ecosystem Rewards    | 15%  | 150,000,000     |
+| Future Development   | 10%  | 100,000,000     |
+| Marketing            | 5%   | 50,000,000      |
+| Reserve / Treasury   | 5%   | 50,000,000      |
 
-No proxy contract
+---
 
-No upgradeable functions
+## 📅 Roadmap
 
-Transparent and verifiable on PolygonScan
+### 2025 Q4  
+- Website launch  
+- GitHub repository  
+- Smart contract verification  
+- Docs & metadata  
 
-🔒 Security & Transparency
+### 2026 Q1  
+- JobX10 Coaching Portal (Beta)  
+- Start of JX10 digital payments  
 
-The JobX10 project follows strict security principles:
+### 2026 Q3  
+- Mobile App concept  
+- Partner integrations  
 
-Public GitHub repository
+---
+
+## 📁 Repository Structure
+
+```text
+/contracts     → Smart contract files
+/docs          → Documentation, tokenomics, roadmap
+/logo          → Token logos (PNG, SVG)
+/metadata      → Token metadata files
+/whitepaper    → English + German whitepapers
+📘 Whitepaper
+
+Available in the folder /whitepaper/:
+
+JX10_Whitepaper_English_v1.0.pdf
+
+JX10_Whitepaper_German.pdf
+
+🛡 Security & Transparency
 
 Public smart contract
 
+Open GitHub source code
+
 Secured liquidity pools
 
-Active monitoring
+No hidden mint functions
 
-Community-first approach
+No upgradeable proxy
 
-🌍 Official Links
+Community-first development
+
+🔗 Official Links
 
 Website: https://jobx10.com
 
-Smart Contract (PolygonScan): https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
+PolygonScan: https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
 
 GitHub: https://github.com/jobx10-official
 
-DEXTools: (coming soon)
+X (Twitter): https://x.com/JobX1089355
 
-CoinGecko Listing: (pending)
-
-CoinMarketCap Listing: (in preparation)
+Telegram: https://t.me/jobx10
 
 👤 Founder
 
 Antonio Deni Simonetta
 Founder of JobX10
-📧 info@jobx10.com
+📩 info@jobx10.com
 
 🤝 Contributions
 
 Contributions are welcome.
-Feel free to open issues or submit pull requests.
-
-⚖ License
-
-This project will be published under the MIT License.
+Open issues and pull requests are appreciated.
