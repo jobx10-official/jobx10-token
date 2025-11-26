@@ -1,125 +1,111 @@
-# JX10 Token (JobX10) – Official Repository
+# <img src="https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/logo/Logo%20256.png" width="40" style="border-radius:50%;vertical-align:middle;" /> JobX10 Token (JX10)
 
-Welcome to the official repository of the **JX10 Token**, a utility token powering the **JobX10 ecosystem**.  
-JX10 operates on the **Polygon (PoS)** blockchain and enables digital payments, rewards and service access within the JobX10 platform.
+### Utility Token for Coaching, Education & Job Ecosystem  
+Built on **Polygon (PoS)** · Fixed Supply · Transparent · Community-Driven
 
 ---
 
-## 🔗 Contract Information
+## 🚀 Badges
 
-| Property | Value |
-|---------|-------|
+![Polygon](https://img.shields.io/badge/Network-Polygon_(PoS)-8247e5?logo=polygon&logoColor=white)
+![Token Type](https://img.shields.io/badge/Type-ERC--20-blue)
+![Supply](https://img.shields.io/badge/Total_Supply-1,000,000,000_JX10-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
+![GitHub Pages](https://img.shields.io/badge/Docs-GitHub_Pages-0a66c2?logo=githubpages&logoColor=white)
+![Version](https://img.shields.io/github/v/release/jobx10-official/jobx10-token)
+
+---
+
+## 🔗 Quick Access
+
+| Resource | Link |
+|---------|------|
+| **📘 Documentation Website** | https://jobx10-official.github.io/jobx10-token/ |
+| **🔎 PolygonScan Contract** | https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1 |
+| **📄 Whitepaper (English)** | [View PDF](whitepaper/JX10_Whitepaper_English_v1.0.pdf) |
+| **📄 Whitepaper (German)** | [View PDF](whitepaper/JX10_Whitepaper_German_v1.0.pdf) |
+| **📂 Full Docs Folder** | /docs |
+| **💻 GitHub Releases** | https://github.com/jobx10-official/jobx10-token/releases |
+| **🐦 X (Twitter)** | https://x.com/JobX1089355 |
+| **💬 Telegram Community** | https://t.me/jobx10 |
+| **✉️ Support** | info@jobx10.com |
+
+---
+
+## 🪙 Token Information
+
+| Field | Value |
+|-------|-------|
 | **Name** | JobX10 |
 | **Symbol** | JX10 |
 | **Type** | ERC-20 |
 | **Decimals** | 18 |
 | **Network** | Polygon (PoS) |
 | **Contract Address** | `0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1` |
-
-PolygonScan:  
-https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
+| **Total Supply** | 1,000,000,000 JX10 |
+| **Proxy / Mint Functions** | None |
 
 ---
 
-## 🎯 Project Mission
+## 🎯 Purpose & Mission
 
-The JobX10 ecosystem empowers:
+JobX10 is designed to support:
 
-- Job seekers  
 - Coaching participants  
-- Freelancers & self-employed professionals  
-- Companies  
-- The JX10 community  
-- Investors & token holders  
-
----
-
-## 🪙 Token Utility
-
-The JX10 token provides utility for:
-
-- **Payments for coaching programs**  
-- **Discounts on JobX10 services**  
-- **Community rewards**  
-- Access to **JobX10 premium content**  
-- Future partner integrations (2026+)  
-
----
-
-## 📊 Tokenomics Overview (Official & Final)
-
-**Total Supply: 1,000,000,000 JX10**  
-*(Non-inflationary, fixed supply)*
-
-| Allocation            | %    | Tokens          |
-|----------------------|------|-----------------|
-| Liquidity Pool       | 55%  | 550,000,000     |
-| Founder Allocation   | 10%  | 100,000,000     |
-| Ecosystem Rewards    | 15%  | 150,000,000     |
-| Future Development   | 10%  | 100,000,000     |
-| Marketing            | 5%   | 50,000,000      |
-| Reserve / Treasury   | 5%   | 50,000,000      |
-
----
-
-## 📅 Roadmap
-
-### **2025 Q4**
-- Website launch  
-- GitHub repository  
-- Smart contract verification  
-- Docs & metadata  
-
-### **2026 Q1**
-- JobX10 Coaching Portal (Beta)  
-- Start of JX10 digital payments  
-
-### **2026 Q3**
-- Mobile App concept  
+- Job seekers  
+- Freelancers & companies  
+- The JobX10 community  
 - Partner integrations  
+- Real-world usage in training, coaching & digital rewards  
 
 ---
 
-## 📁 Repository Structure
+## 📊 Tokenomics Overview
 
-```
-/contracts     → Smart contract files
-/docs          → Documentation, tokenomics, roadmap
-/logo          → Token logos (PNG, SVG)
-/metadata      → Token metadata files
-/whitepaper    → English + German whitepapers
-```
-
----
-
-## 📘 Whitepaper
-
-Available in `/whitepaper/`:
-
-- **[JX10_Whitepaper_English_v1.0.pdf](../../blob/main/whitepaper/JX10_Whitepaper_English_v1.0.pdf)**
-- **[JX10_Whitepaper_German.pdf](../../blob/main/whitepaper/JX10_Whitepaper_German.pdf)**
-
+| Allocation | Percentage | Tokens |
+|-----------|------------|--------|
+| Liquidity Pool | 55% | 550,000,000 |
+| Founder Allocation | 10% | 100,000,000 |
+| Ecosystem Rewards | 15% | 150,000,000 |
+| Future Development | 10% | 100,000,000 |
+| Marketing | 5% | 50,000,000 |
+| Treasury / Reserve | 5% | 50,000,000 |
 
 ---
 
-## 🛡 Security & Transparency
-
-- Public smart contract  
-- Open GitHub source code  
-- Secured liquidity pools  
-- No hidden mint functions  
-- No upgradeable proxy  
-- Community-first development  
+## 🧩 Repository Structure
 
 ---
 
-## 🔗 Official Links
+## 🛡 Security
 
-- **Website:** https://jobx10.com  
-- **PolygonScan:** https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1  
-- **GitHub:** https://github.com/jobx10-official  
-- **X (Twitter):** https://x.com/JobX1089355  
-- **Telegram:** https://t.me/jobx10  
+Please read our official security policy:  
+👉 [SECURITY.md](SECURITY.md)
+
+No hidden mint, no proxy, fixed supply.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!  
+Guidelines:  
+👉 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## ⚖ Governance
+
+Full governance structure:  
+👉 [GOVERNANCE.md](GOVERNANCE.md)
+
+---
+
+## ❤️ Support the Project
+
+If you want to support JobX10:
+
 
 ---
 
@@ -131,36 +117,19 @@ Founder of JobX10
 
 ---
 
-## 🤝 Contributions
+## 🔥 Releases
 
-Contributions are welcome.  
-Open issues and pull requests are appreciated.
-## 📚 Documentation
+Latest Release:  
+➡ https://github.com/jobx10-official/jobx10-token/releases/latest
 
-The complete project documentation is available in the `/docs` directory:
+Full Release List:  
+➡ https://github.com/jobx10-official/jobx10-token/releases
 
-- **Introduction**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/introduction.md
+---
 
-- **Ecosystem Overview**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/ecosystem-overview.md
+## 📝 License
 
-- **Token Utility**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/utility.md
+MIT License. See `LICENSE.md` for details.
 
-- **Tokenomics**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/tokenomics.md
-
-- **Roadmap**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/roadmap.md
-
-- **Security & Transparency**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/security.md
-
-- **Founder Information**  
-  https://github.com/jobx10-official/jobx10-token/blob/main/docs/founder.md
-
-📂 **Full Documentation Folder**  
-Browse all documentation files:  
-👉 https://github.com/jobx10-official/jobx10-token/tree/main/docs
+---
 
