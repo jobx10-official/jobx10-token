@@ -1,5 +1,11 @@
+📄 JX10 Token – ABI (Application Binary Interface)
+
+This document contains the full ABI for the JX10 Token deployed on the Polygon (PoS) network.
+The ABI defines how applications, wallets and smart contracts interact with JX10.
 0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
-[{
+PolygonScan:
+https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1[
+  {
     "inputs": [],
     "stateMutability": "nonpayable",
     "type": "constructor"
@@ -103,3 +109,9 @@
     "type": "function"
   }
 ]
+📞 Contact
+
+Founder: Antonio Deni Simonetta
+📩 info@jobx10.com
+
+🌐 https://jobx10.com
