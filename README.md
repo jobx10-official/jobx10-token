@@ -96,8 +96,9 @@ The JX10 token provides utility for:
 
 Available in `/whitepaper/`:
 
-- **JX10_Whitepaper_English_v1.0.pdf**  
-- **JX10_Whitepaper_German.pdf**
+- **[JX10_Whitepaper_English_v1.0.pdf](../../blob/main/whitepaper/JX10_Whitepaper_English_v1.0.pdf)**
+- **[JX10_Whitepaper_German.pdf](../../blob/main/whitepaper/JX10_Whitepaper_German.pdf)**
+
 
 ---
 
