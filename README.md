@@ -135,3 +135,30 @@ Founder of JobX10
 
 Contributions are welcome.  
 Open issues and pull requests are appreciated.
+## 📚 Documentation
+
+The complete project documentation is available in the `/docs` directory:
+
+- **Introduction**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/introduction.md
+
+- **Ecosystem Overview**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/ecosystem-overview.md
+
+- **Token Utility**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/utility.md
+
+- **Tokenomics**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/tokenomics.md
+
+- **Roadmap**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/roadmap.md
+
+- **Security & Transparency**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/security.md
+
+- **Founder Information**  
+  https://github.com/jobx10-official/jobx10-token/blob/main/docs/founder.md
+
+Full documentation folder:  
+https://github.com/jobx10-official/jobx10-token/tree/main/docs
