@@ -160,5 +160,7 @@ The complete project documentation is available in the `/docs` directory:
 - **Founder Information**  
   https://github.com/jobx10-official/jobx10-token/blob/main/docs/founder.md
 
-Full documentation folder:  
-https://github.com/jobx10-official/jobx10-token/tree/main/docs
+📂 **Full Documentation Folder**  
+Browse all documentation files:  
+👉 https://github.com/jobx10-official/jobx10-token/tree/main/docs
+
