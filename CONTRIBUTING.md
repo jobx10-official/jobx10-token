@@ -46,8 +46,7 @@ If you find a security vulnerability:
 Instead, follow our **Security Policy:**  
 https://github.com/jobx10-official/jobx10-token/blob/main/SECURITY.md
 
-You may report privately via:  
-**security@jobx10.com** or  
+You may report privately via:    
 **info@jobx10.com**
 
 ---
