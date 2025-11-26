@@ -30,9 +30,7 @@ If you discover a security issue, please **do not** open a public GitHub issue.
 
 Instead, report privately via:
 
-### 📩 Email (preferred)  
-**security@jobx10.com**  
-or  
+### 📩 Email (preferred)   
 **info@jobx10.com**
 
 ### 📨 Alternative Contact  
