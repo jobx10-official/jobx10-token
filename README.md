@@ -42,7 +42,7 @@ The JX10 token provides utility for:
 - **Discounts on JobX10 services**  
 - **Community rewards**  
 - Access to **JobX10 premium content**  
-- Future partner integrations (2026+)
+- Future partner integrations (2026+)  
 
 ---
 
@@ -64,17 +64,17 @@ The JX10 token provides utility for:
 
 ## 📅 Roadmap
 
-### 2025 Q4  
+### **2025 Q4**
 - Website launch  
 - GitHub repository  
 - Smart contract verification  
 - Docs & metadata  
 
-### 2026 Q1  
+### **2026 Q1**
 - JobX10 Coaching Portal (Beta)  
 - Start of JX10 digital payments  
 
-### 2026 Q3  
+### **2026 Q3**
 - Mobile App concept  
 - Partner integrations  
 
@@ -82,53 +82,55 @@ The JX10 token provides utility for:
 
 ## 📁 Repository Structure
 
-```text
+```
 /contracts     → Smart contract files
 /docs          → Documentation, tokenomics, roadmap
 /logo          → Token logos (PNG, SVG)
 /metadata      → Token metadata files
 /whitepaper    → English + German whitepapers
-📘 Whitepaper
+```
 
-Available in the folder /whitepaper/:
+---
 
-JX10_Whitepaper_English_v1.0.pdf
+## 📘 Whitepaper
 
-JX10_Whitepaper_German.pdf
+Available in `/whitepaper/`:
 
-🛡 Security & Transparency
+- **JX10_Whitepaper_English_v1.0.pdf**  
+- **JX10_Whitepaper_German.pdf**
 
-Public smart contract
+---
 
-Open GitHub source code
+## 🛡 Security & Transparency
 
-Secured liquidity pools
+- Public smart contract  
+- Open GitHub source code  
+- Secured liquidity pools  
+- No hidden mint functions  
+- No upgradeable proxy  
+- Community-first development  
 
-No hidden mint functions
+---
 
-No upgradeable proxy
+## 🔗 Official Links
 
-Community-first development
+- **Website:** https://jobx10.com  
+- **PolygonScan:** https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1  
+- **GitHub:** https://github.com/jobx10-official  
+- **X (Twitter):** https://x.com/JobX1089355  
+- **Telegram:** https://t.me/jobx10  
 
-🔗 Official Links
+---
 
-Website: https://jobx10.com
+## 👤 Founder
 
-PolygonScan: https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1
+**Antonio Deni Simonetta**  
+Founder of JobX10  
+📩 info@jobx10.com  
 
-GitHub: https://github.com/jobx10-official
+---
 
-X (Twitter): https://x.com/JobX1089355
+## 🤝 Contributions
 
-Telegram: https://t.me/jobx10
-
-👤 Founder
-
-Antonio Deni Simonetta
-Founder of JobX10
-📩 info@jobx10.com
-
-🤝 Contributions
-
-Contributions are welcome.
+Contributions are welcome.  
 Open issues and pull requests are appreciated.
