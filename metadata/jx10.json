@@ -1,21 +1,18 @@
 {
   "name": "JobX10",
   "symbol": "JX10",
-  "type": "ERC-20",
   "decimals": 18,
-  "description": "JobX10 (JX10) is a utility token created to power the JobX ecosystem. It enables payments for coaching services, job programs, community rewards, marketplace usage and future on-chain utilities. Built on the Polygon PoS network, the JX10 token is transparent, secure and fully community-driven.",
+  "description": "JobX10 (JX10) is a utility token powering the JobX10 ecosystem. It enables payments for coaching programs, job preparation services, community rewards and future on-chain utilities. Built on Polygon PoS, the token is transparent, secure and fully community-driven.",
   "website": "https://jobx10.com",
   "explorer": "https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
   "status": "active",
-  "id": "jobx10",
   "chain": "polygon",
-  "network": "Polygon (PoS)",
   "contract_address": "0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
   "links": {
     "website": "https://jobx10.com",
     "github": "https://github.com/jobx10-official",
-    "twitter": "https://twitter.com",         
-    "telegram": "https://t.me"                 
+    "twitter": "https://x.com/JobX1089355",
+    "telegram": "https://t.me/jobx10"
   },
   "tags": [
     "utility-token",
@@ -24,8 +21,8 @@
     "coaching",
     "polygon"
   ],
-    "logo": {
+  "logo": {
     "png": "https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/logo/Logo%20256.png",
-    "svg": "https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/logo/LOGO%20SVG.svg"
+    "svg": "https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/logo/jx10.svg"
   }
 }
