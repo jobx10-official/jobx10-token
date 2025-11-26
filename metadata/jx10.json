@@ -1,24 +1,30 @@
 {
   "name": "JobX10",
   "symbol": "JX10",
+  "type": "ERC-20",
   "decimals": 18,
-  "description": "JobX10 (JX10) is a utility token powering the JobX10 ecosystem. It enables payments for coaching programs, job preparation services, community rewards and future on-chain utilities. Built on Polygon PoS, the token is transparent, secure and fully community-driven.",
+  "total_supply": "1000000000",
+  "description": "JobX10 (JX10) is a utility token powering the JobX10 ecosystem for coaching, job preparation, education, community rewards and future on-chain utilities. Built on Polygon PoS, JX10 is transparent, secure and community-driven.",
   "website": "https://jobx10.com",
   "explorer": "https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
   "status": "active",
   "chain": "polygon",
+  "network": "Polygon (PoS)",
   "contract_address": "0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
   "links": {
     "website": "https://jobx10.com",
     "github": "https://github.com/jobx10-official",
     "twitter": "https://x.com/JobX1089355",
-    "telegram": "https://t.me/jobx10"
+    "telegram": "https://t.me/jobx10",
+    "linkedin": "https://www.linkedin.com/in/antonio-deni-simonetta/",
+    "whitepaper": "https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/whitepaper.pdf"
   },
   "tags": [
     "utility-token",
     "ecosystem",
     "education",
     "coaching",
+    "community",
     "polygon"
   ],
   "logo": {
