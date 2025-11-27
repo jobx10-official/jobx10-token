@@ -155,4 +155,260 @@
       font-size: 0.75rem;
       padding: 0.1rem 0.55rem;
       border-radius: 999px;
-      border: 1px
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    .chip.highlight {
+      background: #dcfce7;
+      border-color: #bbf7d0;
+      color: #15803d;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+
+    .list {
+      font-size: 0.9rem;
+      color: #4b5563;
+      padding-left: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.75rem;
+      border: 1px dashed var(--jx-border);
+      background: #f9fafb;
+      font-size: 0.8rem;
+    }
+
+    .stat-label {
+      color: #6b7280;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      font-size: 0.86rem;
+    }
+
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .link-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    .link-table th,
+    .link-table td {
+      padding: 0.45rem 0.3rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .link-table th {
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .link-table a {
+      color: var(--jx-purple);
+      text-decoration: none;
+    }
+
+    .link-table a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 1.4rem 1rem 2.3rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">
+        <!-- Wenn dein SVG-Logo unter logo/jx10.svg liegt, kannst du es hier verwenden -->
+        <!-- <img src="logo/jx10.svg" alt="JobX10 Logo" width="44" height="44" /> -->
+        <div class="logo-circle">JX10</div>
+        <div>
+          <div class="brand-title">JobX10 Token (JX10)</div>
+          <div class="brand-subtitle">Utility Token for Coaching, Education & Job Ecosystem</div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="docs/">📚 Docs</a>
+        <a class="btn btn-outline" href="whitepaper/">📄 Whitepaper</a>
+        <a class="btn btn-primary" href="donate.html">💜 Support / Donate</a>
+      </div>
+    </header>
+
+    <section class="layout">
+      <!-- MAIN CARD -->
+      <article class="card">
+        <h1>Built on Polygon · Transparent · Community-Driven</h1>
+        <p class="tagline">
+          JobX10 (JX10) connects real-world job coaching and training programs with on-chain utilities:
+          rewards, access, and future payments inside the JobX ecosystem.
+        </p>
+
+        <div class="chip-row">
+          <span class="chip">Network: Polygon (PoS)</span>
+          <span class="chip">Type: ERC-20</span>
+          <span class="chip">Fixed Supply: 1,000,000,000 JX10</span>
+          <span class="chip highlight">KYC free · Community first</span>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Core utilities</div>
+          <ul class="list">
+            <li>Access to JobX10 coaching programs and learning content</li>
+            <li>Rewards for community participation and referrals</li>
+            <li>Future marketplace &amp; job-matching utilities</li>
+            <li>On-chain proof of participation in programs and projects</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Real-world focus</div>
+          <ul class="list">
+            <li>Designed by a job coach with 25+ years HR experience</li>
+            <li>Used in real training groups and job preparation programs</li>
+            <li>Clear, simple tokenomics – no hidden mechanics</li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Network</div>
+            <div class="stat-value">Polygon PoS · EVM compatible</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Contract</div>
+            <div class="stat-value">
+              <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1" target="_blank" rel="noreferrer">
+                0x3EEf…5Fe1
+              </a>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Total Supply</div>
+            <div class="stat-value">1,000,000,000 JX10</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SIDEBAR CARD -->
+      <aside class="card">
+        <div class="sidebar-title">Quick Access</div>
+        <table class="link-table">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Documentation Website</td>
+              <td>
+                <a href="https://jobx10-official.github.io/jobx10-token/docs/" target="_blank" rel="noreferrer">
+                  Open Docs
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>PolygonScan Contract</td>
+              <td>
+                <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1" target="_blank" rel="noreferrer">
+                  View on PolygonScan
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Whitepaper (English)</td>
+              <td>
+                <a href="whitepaper/JobX10-Whitepaper-EN.pdf" target="_blank" rel="noreferrer">
+                  View PDF
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Whitepaper (German)</td>
+              <td>
+                <a href="whitepaper/JobX10-Whitepaper-DE.pdf" target="_blank" rel="noreferrer">
+                  View PDF
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>GitHub Repository</td>
+              <td>
+                <a href="https://github.com/jobx10-official/jobx10-token" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Support / Donate</td>
+              <td>
+                <a href="donate.html">Donation Page</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+
+    <footer>
+      <span>JobX10 (JX10) – Utility token for real job coaching &amp; education projects.</span>
+      <span>Founder: Antonio Deni Simonetta · <a href="https://jobx10.com" target="_blank" rel="noreferrer">jobx10.com</a></span>
+    </footer>
+  </main>
+</body>
+</html>
