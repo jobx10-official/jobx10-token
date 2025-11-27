@@ -81,6 +81,18 @@
       color: #6b7280;
     }
 
+    .price-ticker {
+      display: inline-block;
+      margin-top: 0.25rem;
+      padding: 0.2rem 0.6rem;
+      background: #f3e8ff;
+      color: #6b21a8;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #e9d5ff;
+      font-weight: 600;
+    }
+
     .nav-actions {
       display: flex;
       gap: 0.75rem;
@@ -294,6 +306,7 @@
         <div>
           <div class="brand-title">JobX10 Token (JX10)</div>
           <div class="brand-subtitle">Utility Token for Coaching, Education & Job Ecosystem</div>
+          <span id="jx10-price" class="price-ticker">JX10 Price: loading...</span>
         </div>
       </div>
 
@@ -411,6 +424,14 @@
               </td>
             </tr>
             <tr>
+              <td>Trade (CMC DEX)</td>
+              <td>
+                <a href="https://dex.coinmarketcap.com/token/polygon/0x3eef16cb777548dadc4e78240a50dfa72af35fe1/" target="_blank" rel="noreferrer">
+                  Open on CMC DEX
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>Whitepaper (English)</td>
               <td>
                 <a href="whitepaper/JX10_Whitepaper_English_v1.0.pdf" target="_blank" rel="noreferrer">
@@ -474,6 +495,33 @@
         alert("JX10 konnte nicht zu MetaMask hinzugefügt werden. Bitte Konsolen-Log prüfen.");
       }
     }
+
+    async function loadJX10Price() {
+      try {
+        const res = await fetch("https://api.dexscreener.com/latest/dex/tokens/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1");
+        const data = await res.json();
+        const price = data.pairs?.[0]?.priceUsd || null;
+
+        const el = document.getElementById("jx10-price");
+        if (!el) return;
+
+        if (!price) {
+          el.textContent = "JX10 Price: unavailable";
+          return;
+        }
+
+        el.textContent = "JX10 Price: $" + Number(price).toFixed(6);
+      } catch (err) {
+        console.error("Ticker error:", err);
+        const el = document.getElementById("jx10-price");
+        if (el) el.textContent = "JX10 Price: error";
+      }
+    }
+
+    // Initial Load
+    loadJX10Price();
+    // Refresh alle 60 Sekunden
+    setInterval(loadJX10Price, 60000);
   </script>
 </body>
 </html>
