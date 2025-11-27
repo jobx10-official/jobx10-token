@@ -16,23 +16,6 @@
       --jx-light: #f3f4f6;
       --jx-border: #e5e7eb;
       --jx-green: #16a34a;
-        .mm-btn {
-      margin-top: 0.35rem;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.78rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #fff;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .mm-btn:hover {
-      background: #f3f4f6;
-    }
-
     }
 
     * {
@@ -224,6 +207,23 @@
       font-size: 0.86rem;
     }
 
+    .mm-btn {
+      margin-top: 0.35rem;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.78rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .mm-btn:hover {
+      background: #f3f4f6;
+    }
+
     .sidebar-title {
       font-size: 1rem;
       font-weight: 600;
@@ -289,7 +289,6 @@
   <main class="page">
     <header>
       <div class="brand">
-        <!-- Wenn dein SVG-Logo unter logo/jx10.svg liegt, kannst du es hier verwenden -->
         <!-- <img src="logo/jx10.svg" alt="JobX10 Logo" width="44" height="44" /> -->
         <div class="logo-circle">JX10</div>
         <div>
@@ -298,32 +297,30 @@
         </div>
       </div>
 
-    <div class="nav-actions">
-  <a
-    class="btn btn-primary"
-    style="background:#16a34a;border-color:#16a34a;"
-    href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
-    target="_blank"
-    rel="noreferrer"
-  >
-    🟢 Buy JX10
-  </a>
+      <div class="nav-actions">
+        <a
+          class="btn btn-primary"
+          style="background:#16a34a;border-color:#16a34a;"
+          href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+          target="_blank"
+          rel="noreferrer"
+        >
+          🟢 Buy JX10
+        </a>
 
-  <a class="btn btn-outline" href="docs/">📚 Docs</a>
- <a 
-  class="btn btn-outline" 
-  href="whitepaper/JX10_Whitepaper_English_v1.0.pdf" 
-  target="_blank" 
-  rel="noreferrer"
->
-  📄 Whitepaper
-</a>
+        <a class="btn btn-outline" href="docs/">📚 Docs</a>
 
+        <a
+          class="btn btn-outline"
+          href="whitepaper/JX10_Whitepaper_English_v1.0.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          📄 Whitepaper
+        </a>
 
-  <a class="btn btn-primary" href="donate.html">💜 Support / Donate</a>
-</div>
-
-
+        <a class="btn btn-primary" href="donate.html">💜 Support / Donate</a>
+      </div>
     </header>
 
     <section class="layout">
@@ -352,24 +349,21 @@
           </ul>
         </div>
 
-        <div class="stat">
-  <div class="stat-label">Contract</div>
-  <div class="stat-value">
-    <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1" target="_blank" rel="noreferrer">
-      0x3EEf…5Fe1
-    </a>
-  </div>
-  <button type="button" class="mm-btn" onclick="addJX10ToMetaMask()">
-    🦊 Add JX10 to MetaMask
-  </button>
-</div>
-
+        <div class="section">
+          <div class="section-title">Real-world focus</div>
+          <ul class="list">
+            <li>Designed by a job coach with 25+ years HR experience</li>
+            <li>Used in real training groups and job preparation programs</li>
+            <li>Clear, simple tokenomics – no hidden mechanics</li>
+          </ul>
+        </div>
 
         <div class="stats">
           <div class="stat">
             <div class="stat-label">Network</div>
             <div class="stat-value">Polygon PoS · EVM compatible</div>
           </div>
+
           <div class="stat">
             <div class="stat-label">Contract</div>
             <div class="stat-value">
@@ -377,7 +371,11 @@
                 0x3EEf…5Fe1
               </a>
             </div>
+            <button type="button" class="mm-btn" onclick="addJX10ToMetaMask()">
+              🦊 Add JX10 to MetaMask
+            </button>
           </div>
+
           <div class="stat">
             <div class="stat-label">Total Supply</div>
             <div class="stat-value">1,000,000,000 JX10</div>
@@ -413,23 +411,22 @@
               </td>
             </tr>
             <tr>
-  <td>Whitepaper (English)</td>
-  <td>
-    <a href="whitepaper/JX10_Whitepaper_English_v1.0.pdf" target="_blank" rel="noreferrer">
-      View PDF
-    </a>
-  </td>
-</tr>
-
-<tr>
-  <td>Whitepaper (German)</td>
-  <td>
-    <a href="whitepaper/JX10_Whitepaper_German.pdf" target="_blank" rel="noreferrer">
-      View PDF
-    </a>
-  </td>
-</tr>
-
+              <td>Whitepaper (English)</td>
+              <td>
+                <a href="whitepaper/JX10_Whitepaper_English_v1.0.pdf" target="_blank" rel="noreferrer">
+                  View PDF
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Whitepaper (German)</td>
+              <td>
+                <a href="whitepaper/JX10_Whitepaper_German.pdf" target="_blank" rel="noreferrer">
+                  View PDF
+                </a>
+              </td>
+            </tr>
+            <tr>
               <td>Support / Donate</td>
               <td>
                 <a href="donate.html">Donation Page</a>
@@ -445,6 +442,7 @@
       <span>Founder: Antonio Deni Simonetta · <a href="https://jobx10.com" target="_blank" rel="noreferrer">jobx10.com</a></span>
     </footer>
   </main>
+
   <script>
     async function addJX10ToMetaMask() {
       if (!window.ethereum) {
@@ -479,5 +477,3 @@
   </script>
 </body>
 </html>
-
-
