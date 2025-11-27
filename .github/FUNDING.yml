@@ -5,10 +5,7 @@ custom:
   - "https://jobx10.com"
   - "https://polygonscan.com/address/0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
   - "https://jobx10.com/donate"   # Falls du später eine Spenden-Seite machst
-  # Crypto-Adressen als Text, damit GitHub nichts meckert:
-  - "ETH/Polygon Address: 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-  - "USDT (ERC20): 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-  - "USDC (ERC20): 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+
 
 # Optionale Provider (leer lassen oder korrekt ausfüllen)
 patreon:
