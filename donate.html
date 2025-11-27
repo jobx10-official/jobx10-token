@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support JobX10 (JX10)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support the JobX10 (JX10) project with donations in crypto or by sharing the project with your network." />
+
+  <style>
+    :root {
+      --jx-purple: #8247e5;
+      --jx-dark: #111827;
+      --jx-light: #f3f4f6;
+      --jx-border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--jx-light);
+      color: var(--jx-dark);
+      line-height: 1.6;
+      padding: 1.5rem;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 1rem;
+      border: 1px solid var(--jx-border);
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #a78bfa, var(--jx-purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      box-shadow: 0 10px 20px rgba(130,71,229,0.45);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+
+    .back-link a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--jx-purple);
+      border: 1px solid var(--jx-purple);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+    }
+
+    .section {
+      margin-top: 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section p {
+      font-size: 0.98rem;
+      color: #4b5563;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      border-radius: 0.9rem;
+      border: 1px solid var(--jx-border);
+      padding: 1rem 1rem 1.1rem;
+      background: #f9fafb;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      background: #e5defc;
+      color: var(--jx-purple);
+    }
+
+    .address-label {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.4rem;
+    }
+
+    .address {
+      font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      word-break: break-all;
+      background: white;
+      padding: 0.55rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      margin-top: 0.3rem;
+    }
+
+    .address-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .address-row .address {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    .copy-btn {
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.55rem 0.8rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+      background: var(--jx-purple);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .copy-btn.copied {
+      background: #16a34a;
+    }
+
+    .qr {
+      display: block;
+      margin-top: 0.6rem;
+      max-width: 130px;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      background: white;
+      padding: 0.4rem;
+    }
+
+    .info-list {
+      margin-top: 0.5rem;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .info-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--jx-border);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+    }
+
+    a {
+      color: var(--jx-purple);
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 1.4rem 1rem 2rem;
+      }
+      header {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">
+        <div class="logo-circle">JX10</div>
+        <div>
+          <h1>Support the JobX10 (JX10) Project</h1>
+          <p class="subtitle">
+            Helping people 10× their job chances – powered by the community.
+          </p>
+        </div>
+      </div>
+      <div class="back-link">
+        <a href="./">← Back to token page</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Why your support matters</h2>
+      <p>
+        JobX10 (JX10) is a self-funded project that combines job coaching, education
+        and blockchain technology. Any support helps to cover development, infrastructure
+        and community activities.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Donate with Crypto (EVM / Polygon)</h2>
+      <p>
+        You can use the same address on Ethereum and Polygon (EVM-compatible wallets).
+        Please always double-check the address before sending.
+      </p>
+
+      <div class="cards">
+        <!-- ETH / Polygon -->
+        <div class="card">
+          <h3>ETH / MATIC <span class="badge">Main address</span></h3>
+          <p class="address-label">ETH &amp; MATIC (EVM-compatible):</p>
+          <div class="address-row">
+            <div class="address" id="addr-eth">
+              0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d
+            </div>
+            <button class="copy-btn" data-target="addr-eth">Copy</button>
+          </div>
+          <img
+            class="qr"
+            alt="QR code for ETH / Polygon donation address"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+          />
+          <ul class="info-list">
+            <li>Network: Ethereum or Polygon PoS</li>
+            <li>Type: Native coins (ETH, MATIC) or ERC-20 / Polygon tokens</li>
+          </ul>
+        </div>
+
+        <!-- USDT -->
+        <div class="card">
+          <h3>USDT (ERC-20)</h3>
+          <p class="address-label">USDT on Ethereum / Polygon (same address):</p>
+          <div class="address-row">
+            <div class="address" id="addr-usdt">
+              0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d
+            </div>
+            <button class="copy-btn" data-target="addr-usdt">Copy</button>
+          </div>
+          <img
+            class="qr"
+            alt="QR code for USDT donation address"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+          />
+          <ul class="info-list">
+            <li>Token: USDT (Tether)</li>
+            <li>Network: Ethereum / Polygon, EVM-compatible</li>
+          </ul>
+        </div>
+
+        <!-- USDC -->
+        <div class="card">
+          <h3>USDC (ERC-20)</h3>
+          <p class="address-label">USDC on Ethereum / Polygon (same address):</p>
+          <div class="address-row">
+            <div class="address" id="addr-usdc">
+              0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d
+            </div>
+            <button class="copy-btn" data-target="addr-usdc">Copy</button>
+          </div>
+          <img
+            class="qr"
+            alt="QR code for USDC donation address"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+          />
+          <ul class="info-list">
+            <li>Token: USDC (Circle)</li>
+            <li>Network: Ethereum / Polygon, EVM-compatible</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Support by sharing</h2>
+      <p>
+        If you can't or don't want to donate, you still help a lot by sharing
+        the project:
+      </p>
+      <ul class="info-list">
+        <li>Share <a href="https://jobx10.com" target="_blank" rel="noreferrer">jobx10.com</a> with friends or colleagues.</li>
+        <li>Talk about JobX10 in your community or on social media.</li>
+        <li>Use JX10 in real coaching or training projects.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>JobX10 (JX10) – Community-driven job &amp; education token on Polygon.</span>
+      <span>Contract: <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1" target="_blank" rel="noreferrer">0x3EEf…5Fe1</a></span>
+    </footer>
+  </main>
+
+  <script>
+    // Simple copy-to-clipboard for all buttons
+    document.querySelectorAll(".copy-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-target");
+        var el = document.getElementById(id);
+        if (!el) return;
+        var text = el.textContent.trim();
+
+        navigator.clipboard.writeText(text).then(function () {
+          btn.classList.add("copied");
+          btn.textContent = "Copied";
+          setTimeout(function () {
+            btn.classList.remove("copied");
+            btn.textContent = "Copy";
+          }, 1500);
+        }).catch(function () {
+          alert("Could not copy address. Please copy manually.");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
