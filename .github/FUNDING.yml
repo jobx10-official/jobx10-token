@@ -6,6 +6,8 @@ custom:
   - "https://polygonscan.com/address/0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
   - "https://jobx10.com/donate"   # Falls du später eine Spenden-Seite machst
 
+custom:
+  - "https://jobx10-official.github.io/jobx10-token/donate.html"
 
 # Optionale Provider (leer lassen oder korrekt ausfüllen)
 patreon:
