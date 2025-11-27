@@ -1,17 +1,16 @@
 # GitHub Sponsors / Funding configuration for the JobX10 (JX10) project
 
+# Hauptlink
 custom:
-  - https://jobx10.com
+  - "https://jobx10.com"
+  - "https://polygonscan.com/address/0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+  - "https://jobx10.com/donate"   # Falls du später eine Spenden-Seite machst
+  # Crypto-Adressen als Text, damit GitHub nichts meckert:
+  - "ETH/Polygon Address: 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+  - "USDT (ERC20): 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
+  - "USDC (ERC20): 0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
 
-# Cryptocurrency support
-# All addresses are on the Ethereum / Polygon network (EVM-compatible)
-
-ethereum: "0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-polygon: "0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-usdt: "0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-usdc: "0x24e65dcc5ca41251674fe9d36af6ff1ecbb2c02d"
-
-# Optional (currently unused providers)
+# Optionale Provider (leer lassen oder korrekt ausfüllen)
 patreon:
 open_collective:
 ko_fi:
