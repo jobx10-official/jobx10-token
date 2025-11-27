@@ -16,6 +16,23 @@
       --jx-light: #f3f4f6;
       --jx-border: #e5e7eb;
       --jx-green: #16a34a;
+        .mm-btn {
+      margin-top: 0.35rem;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.78rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .mm-btn:hover {
+      background: #f3f4f6;
+    }
+
     }
 
     * {
@@ -335,14 +352,18 @@
           </ul>
         </div>
 
-        <div class="section">
-          <div class="section-title">Real-world focus</div>
-          <ul class="list">
-            <li>Designed by a job coach with 25+ years HR experience</li>
-            <li>Used in real training groups and job preparation programs</li>
-            <li>Clear, simple tokenomics – no hidden mechanics</li>
-          </ul>
-        </div>
+        <div class="stat">
+  <div class="stat-label">Contract</div>
+  <div class="stat-value">
+    <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1" target="_blank" rel="noreferrer">
+      0x3EEf…5Fe1
+    </a>
+  </div>
+  <button type="button" class="mm-btn" onclick="addJX10ToMetaMask()">
+    🦊 Add JX10 to MetaMask
+  </button>
+</div>
+
 
         <div class="stats">
           <div class="stat">
@@ -424,5 +445,39 @@
       <span>Founder: Antonio Deni Simonetta · <a href="https://jobx10.com" target="_blank" rel="noreferrer">jobx10.com</a></span>
     </footer>
   </main>
+  <script>
+    async function addJX10ToMetaMask() {
+      if (!window.ethereum) {
+        alert("MetaMask (oder ein anderer Web3-Wallet) wurde im Browser nicht gefunden.");
+        return;
+      }
+
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: "wallet_watchAsset",
+          params: {
+            type: "ERC20",
+            options: {
+              address: "0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
+              symbol: "JX10",
+              decimals: 18,
+              image: "https://jobx10-official.github.io/jobx10-token/logo/jx10.svg"
+            }
+          }
+        });
+
+        if (wasAdded) {
+          console.log("JX10 wurde zu MetaMask hinzugefügt.");
+        } else {
+          console.log("Der Benutzer hat das Hinzufügen zu MetaMask abgebrochen.");
+        }
+      } catch (error) {
+        console.error("Fehler beim Hinzufügen zu MetaMask:", error);
+        alert("JX10 konnte nicht zu MetaMask hinzugefügt werden. Bitte Konsolen-Log prüfen.");
+      }
+    }
+  </script>
 </body>
 </html>
+
+
