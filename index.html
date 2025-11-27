@@ -15,11 +15,7 @@
       --jx-green: #16a34a;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -65,15 +61,8 @@
       box-shadow: 0 10px 20px rgba(130, 71, 229, 0.45);
     }
 
-    .brand-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    .brand-subtitle {
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
+    .brand-title { font-size: 1.6rem; font-weight: 700; }
+    .brand-subtitle { font-size: 0.9rem; color: #6b7280; }
 
     .price-ticker {
       display: inline-block;
@@ -105,18 +94,8 @@
       text-decoration: none;
     }
 
-    .btn-primary {
-      background: var(--jx-purple);
-      color: white;
-      border-color: var(--jx-purple);
-    }
-
-    .btn-outline {
-      background: white;
-      color: var(--jx-dark);
-      border-color: var(--jx-border);
-    }
-
+    .btn-primary { background: var(--jx-purple); color: white; border-color: var(--jx-purple); }
+    .btn-outline { background: white; color: var(--jx-dark); border-color: var(--jx-border); }
     .btn-primary:hover { opacity: 0.9; }
     .btn-outline:hover { background: #f9fafb; }
 
@@ -159,17 +138,8 @@
       color: #15803d;
     }
 
-    .section-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.45rem;
-    }
-
-    .list {
-      font-size: 0.9rem;
-      color: #4b5563;
-      padding-left: 1.05rem;
-    }
+    .section-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.45rem; }
+    .list { font-size: 0.9rem; color: #4b5563; padding-left: 1.05rem; }
 
     .list li { margin-bottom: 0.25rem; }
 
@@ -222,7 +192,7 @@
     .link-table td {
       padding: 0.45rem 0.3rem;
       text-align: left;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid var(--jx-border);
     }
 
     .link-table th {
@@ -279,10 +249,10 @@
       </div>
     </header>
 
-    <!-- CONTENT GRID -->
+    <!-- GRID -->
     <section class="layout">
 
-      <!-- LEFT MAIN CARD -->
+      <!-- LEFT MAIN -->
       <article class="card">
         <h1>Built on Polygon · Transparent · Community-Driven</h1>
 
@@ -383,7 +353,7 @@
           </tbody>
         </table>
 
-        <!-- LIVE CHART AREA -->
+        <!-- LIVE CHART -->
         <div style="margin-top: 1.4rem;">
           <div style="font-weight:600; font-size:0.9rem; margin-bottom:0.5rem;">
             Live Chart (Polygon)
@@ -398,6 +368,58 @@
       </aside>
     </section>
 
+    <!-- TEAM SECTION -->
+    <section class="card" style="margin-top:2rem;">
+      <h2 style="font-size:1.4rem; margin-bottom:0.8rem;">Team</h2>
+      <p style="font-size:0.92rem; color:#4b5563; margin-bottom:1.5rem;">
+        JobX10 is developed by a transparent, real-world team with over 25 years of experience
+        in human resources, job coaching, and education programs in Switzerland and Portugal.
+      </p>
+
+      <div style="display:flex; gap:1.2rem; align-items:flex-start; flex-wrap:wrap;">
+        <img
+          src="logo/Deni Simonetta.jpg"
+          alt="Antonio Deni Simonetta"
+          style="width:95px; height:95px; border-radius:12px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.1);"
+        />
+
+        <div>
+          <h3 style="margin:0; font-size:1.15rem; font-weight:600;">
+            Antonio Deni Simonetta
+          </h3>
+          <p style="margin:0.2rem 0 0.6rem; color:#6b7280; font-size:0.88rem;">
+            Founder & Project Lead – JobX10 (JX10)
+          </p>
+
+          <p style="font-size:0.9rem; color:#4b5563; line-height:1.45;">
+            25+ years professional experience in HR, job coaching, and placement.
+            Founder of Attenomis GmbH and active job coach in Switzerland and Portugal.
+            Responsible for the JobX10 token concept, real-world integration into training programs,
+            ecosystem development, and community strategy.
+          </p>
+
+          <div style="margin-top:0.8rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
+
+            <a
+              href="https://www.linkedin.com/in/deni-simonetta"
+              target="_blank"
+              style="color:#8247e5; font-weight:500; text-decoration:none;"
+            >
+              🔗 LinkedIn
+            </a>
+
+            <a
+              href="mailto:info@jobx10.com"
+              style="color:#8247e5; font-weight:500; text-decoration:none;"
+            >
+              ✉️ Contact
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <span>JobX10 (JX10) – Utility token for real job coaching & education projects.</span>
       <span>Founder: Antonio Deni Simonetta · <a href="https://jobx10.com" target="_blank">jobx10.com</a></span>
@@ -405,6 +427,7 @@
 
   </main>
 
+  <!-- SCRIPTS -->
   <script>
     async function addJX10ToMetaMask() {
       if (!window.ethereum) {
@@ -413,7 +436,7 @@
       }
 
       try {
-        const wasAdded = await window.ethereum.request({
+        await window.ethereum.request({
           method: "wallet_watchAsset",
           params: {
             type: "ERC20",
@@ -425,8 +448,6 @@
             }
           }
         });
-
-        console.log(wasAdded ? "Added to MetaMask" : "User cancelled");
       } catch (err) {
         alert("Fehler beim Hinzufügen zu MetaMask.");
       }
@@ -438,21 +459,15 @@
         const data = await res.json();
         const price = data.pairs?.[0]?.priceUsd;
 
-        const el = document.getElementById("jx10-price");
-        if (!price) {
-          el.textContent = "JX10 Price: unavailable";
-          return;
-        }
-
-        el.textContent = "JX10 Price: $" + Number(price).toFixed(6);
-
-      } catch (err) {
-        document.getElementById("jx10-price").textContent = "JX10 Price: error";
+        document.getElementById("jx10-price").textContent =
+          price ? "JX10 Price: $" + Number(price).toFixed(6) : "JX10 Price: unavailable";
+      } catch {
+        document.getElementById("jx10-price").textContent = "JX10 Price: unavailable";
       }
     }
 
     loadJX10Price();
-    setInterval(loadJX10Price, 60000);
+    setInterval(loadJX10Price, 30000);
   </script>
 
 </body>
