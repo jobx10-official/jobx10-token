@@ -1,4 +1,3 @@
-}
 # <img src="https://raw.githubusercontent.com/jobx10-official/jobx10-token/main/logo/Logo%20256.png" width="40" style="border-radius:50%;vertical-align:middle;" /> JobX10 Token (JX10)
 
 ### Utility Token for Coaching, Education & Job Ecosystem  
