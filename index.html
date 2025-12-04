@@ -2,473 +2,629 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>JobX10 (JX10) – Official Token Page</title>
+  <title>JobX10 (JX10) – Official Token on Polygon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="JobX10 (JX10) is a Polygon-based utility token powering the JobX10 ecosystem for coaching, education, job programs and community rewards." />
-
+  <meta name="description" content="JobX10 (JX10) is a Polygon-based utility token for coaching, education and job ecosystem services." />
+  <link rel="icon" href="https://jobx10-official.github.io/jobx10-token/logo/jx10-logo-256.png" />
   <style>
     :root {
-      --jx-purple: #8247e5;
-      --jx-dark: #111827;
-      --jx-light: #f3f4f6;
-      --jx-border: #e5e7eb;
-      --jx-green: #16a34a;
+      --bg: #050816;
+      --bg-alt: #070b1f;
+      --card: #0b1024;
+      --accent: #f9a826;
+      --accent-soft: rgba(249,168,38,0.15);
+      --text: #f4f4f5;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --success: #22c55e;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 40px rgba(0,0,0,0.55);
+      --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--jx-light);
-      color: var(--jx-dark);
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .page {
-      max-width: 1100px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
+      padding: 16px 16px 32px;
     }
 
     header {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 10px;
     }
 
-    .logo-circle {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #a78bfa, var(--jx-purple));
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 20% 20%, #f59e0b, #b45309 40%, #111827 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      font-weight: 800;
+      font-size: 18px;
+      color: #020617;
+      box-shadow: 0 0 0 1px rgba(248,250,252,0.04),
+                  0 18px 40px rgba(0,0,0,0.5);
+    }
+
+    .brand-text-title {
+      font-size: 18px;
       font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 10px 20px rgba(130, 71, 229, 0.45);
     }
 
-    .brand-title { font-size: 1.6rem; font-weight: 700; }
-    .brand-subtitle { font-size: 0.9rem; color: #6b7280; }
-
-    .price-ticker {
-      display: inline-block;
-      margin-top: 0.25rem;
-      padding: 0.2rem 0.6rem;
-      background: #f3e8ff;
-      color: #6b21a8;
-      font-size: 0.8rem;
-      border-radius: 999px;
-      border: 1px solid #e9d5ff;
-      font-weight: 600;
+    .brand-text-sub {
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    .nav-actions {
+    .nav-links {
       display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 14px;
     }
 
-    .btn {
-      border-radius: 999px;
-      padding: 0.5rem 1.1rem;
-      font-size: 0.9rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
+    .nav-links a {
+      color: var(--muted);
       text-decoration: none;
     }
 
-    .btn-primary { background: var(--jx-purple); color: white; border-color: var(--jx-purple); }
-    .btn-outline { background: white; color: var(--jx-dark); border-color: var(--jx-border); }
-    .btn-primary:hover { opacity: 0.9; }
-    .btn-outline:hover { background: #f9fafb; }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 1.5rem;
+    .nav-links a:hover {
+      color: var(--text);
     }
 
-    .card {
-      background: white;
-      border-radius: 1rem;
-      border: 1px solid var(--jx-border);
-      padding: 1.4rem 1.4rem 1.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    }
-
-    h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
-    .tagline { font-size: 0.98rem; color: #4b5563; margin-bottom: 0.9rem; }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .chip {
-      font-size: 0.75rem;
-      padding: 0.1rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      color: #4b5563;
-    }
-
-    .chip.highlight {
-      background: #dcfce7;
-      border-color: #bbf7d0;
-      color: #15803d;
-    }
-
-    .section-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.45rem; }
-    .list { font-size: 0.9rem; color: #4b5563; padding-left: 1.05rem; }
-
-    .list li { margin-bottom: 0.25rem; }
-
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .stat {
-      padding: 0.65rem 0.8rem;
-      border-radius: 0.75rem;
-      border: 1px dashed var(--jx-border);
-      background: #f9fafb;
-      font-size: 0.8rem;
-    }
-
-    .stat-label { color: #6b7280; }
-    .stat-value { font-weight: 600; font-size: 0.86rem; }
-
-    .mm-btn {
-      margin-top: 0.35rem;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.78rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #fff;
-      cursor: pointer;
+    .primary-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
-    }
-
-    .mm-btn:hover { background: #f3f4f6; }
-
-    .sidebar-title {
-      font-size: 1rem;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f97316, #facc15);
+      color: #111827;
       font-weight: 600;
-      margin-bottom: 0.6rem;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(248, 181, 24, 0.45);
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .link-table {
+    .primary-btn span {
+      margin-left: 6px;
+      font-size: 16px;
+    }
+
+    .primary-btn:hover {
+      filter: brightness(1.05);
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      padding-top: 12px;
+      padding-bottom: 32px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 28px;
+      margin-top: 16px;
+      margin-bottom: 32px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .primary-btn.nav-buy {
+        display: none;
+      }
+
+      .shell {
+        padding-inline: 14px;
+      }
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.88));
+      border-radius: var(--radius-xl);
+      padding: 22px 22px 20px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.3);
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #22c55e, #16a34a 50%, #064e3b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5f9ed;
+      font-size: 14px;
+    }
+
+    .pill-strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 3vw, 32px);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #fbbf24, #f97316, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 520px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .meta-item {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.8);
+      background: rgba(15,23,42,0.9);
+    }
+
+    .meta-label {
+      color: #9ca3af;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-right: 4px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.9);
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      gap: 6px;
+    }
+
+    .secondary-btn:hover {
+      border-color: rgba(248,250,252,0.4);
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .hero-footnote {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 11px;
+    }
+
+    .hero-stat {
+      border-radius: 14px;
+      border: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+      padding: 7px 9px;
+    }
+
+    .hero-stat-label {
+      color: var(--muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+
+    .hero-stat-value {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.18), rgba(15,23,42,0.98));
+      font-size: 11px;
+      color: var(--muted);
+      max-width: 170px;
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-size: 11px;
+      color: #e5e7eb;
+      margin-bottom: 3px;
+    }
+
+    .hero-badge small {
+      font-size: 10px;
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.2), rgba(15,23,42,0.98));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .panel-heading {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .panel-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .panel-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+    }
+
+    .badge.good {
+      border-color: rgba(34,197,94,0.8);
+      background: rgba(22,163,74,0.14);
+      color: #bbf7d0;
+    }
+
+    .badge.warn {
+      border-color: rgba(234,179,8,0.8);
+      background: rgba(202,138,4,0.18);
+      color: #fef3c7;
+    }
+
+    .chart-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(15,23,42,0.8);
+      background: #020617;
+      height: 260px;
+    }
+
+    .chart-frame iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .section {
+      margin-top: 26px;
+      padding: 18px 20px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+      border: 1px solid rgba(55,65,81,0.9);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .section-grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 880px) {
+      .section-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 7px;
+    }
+
+    ul {
+      margin-left: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    .tokenomics-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.86rem;
+      margin-top: 6px;
+      font-size: 13px;
     }
 
-    .link-table th,
-    .link-table td {
-      padding: 0.45rem 0.3rem;
+    .tokenomics-table th,
+    .tokenomics-table td {
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(31,41,55,0.9);
+    }
+
+    .tokenomics-table th {
       text-align: left;
-      border-bottom: 1px solid var(--jx-border);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: #9ca3af;
     }
 
-    .link-table th {
+    .tokenomics-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tokenomics-table tr:hover td {
+      background: rgba(15,23,42,0.95);
+    }
+
+    .label-pill {
+      display: inline-flex;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.9);
+      font-size: 11px;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.96);
+      margin-bottom: 4px;
+    }
+
+    .steps {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      margin-top: 4px;
+    }
+
+    .step {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.98);
+      margin-top: 2px;
+    }
+
+    .step-body {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .links-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .link-card {
+      border-radius: 12px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.96);
+      padding: 7px 9px 8px;
+      font-size: 12px;
+    }
+
+    .link-card-title {
+      font-size: 12px;
       font-weight: 600;
-      font-size: 0.8rem;
-      color: #6b7280;
+      margin-bottom: 2px;
+      color: #e5e7eb;
     }
 
-    .link-table a { color: var(--jx-purple); }
-    .link-table a:hover { text-decoration: underline; }
+    .link-card a {
+      font-size: 12px;
+      color: var(--accent);
+      word-break: break-all;
+    }
 
     footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #6b7280;
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      border-top: 1px solid rgba(31,41,55,0.95);
+      background: #020617;
+      padding: 14px 0 18px;
+      margin-top: 24px;
     }
 
-    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .page { padding: 1.4rem 1rem 2.3rem; } }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-inline: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      background: rgba(15,23,42,0.9);
+      padding: 2px 4px;
+      border-radius: 4px;
+      border: 1px solid rgba(55,65,81,0.9);
+    }
   </style>
 </head>
-
 <body>
-  <main class="page">
-
-    <!-- HEADER -->
-    <header>
-      <div class="brand">
-        <div class="logo-circle">JX10</div>
-        <div>
-          <div class="brand-title">JobX10 Token (JX10)</div>
-          <div class="brand-subtitle">Utility Token for Coaching, Education & Job Ecosystem</div>
-          <span id="jx10-price" class="price-ticker">JX10 Price: loading...</span>
-        </div>
-      </div>
-
-      <div class="nav-actions">
-        <a class="btn btn-primary"
-           style="background:#16a34a;border-color:#16a34a;"
-           href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
-           target="_blank">🟢 Buy JX10</a>
-
-        <a class="btn btn-outline" href="docs/">📚 Docs</a>
-
-        <a class="btn btn-outline"
-           href="whitepaper/JX10_Whitepaper_English_v1.0.pdf"
-           target="_blank">📄 Whitepaper</a>
-
-        <a class="btn btn-primary" href="donate.html">💜 Support / Donate</a>
-      </div>
-    </header>
-
-    <!-- GRID -->
-    <section class="layout">
-
-      <!-- LEFT MAIN -->
-      <article class="card">
-        <h1>Built on Polygon · Transparent · Community-Driven</h1>
-
-        <p class="tagline">
-          JobX10 (JX10) connects real-world job coaching and training programs with on-chain utilities:
-          rewards, access, and future payments inside the JobX ecosystem.
-        </p>
-
-        <div class="chip-row">
-          <span class="chip">Network: Polygon (PoS)</span>
-          <span class="chip">Type: ERC-20</span>
-          <span class="chip">Fixed Supply: 1,000,000,000 JX10</span>
-          <span class="chip highlight">KYC free · Community first</span>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Core utilities</div>
-          <ul class="list">
-            <li>Access to JobX10 coaching programs and learning content</li>
-            <li>Rewards for community participation and referrals</li>
-            <li>Future marketplace & job-matching utilities</li>
-            <li>On-chain proof of participation in programs and projects</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Real-world focus</div>
-          <ul class="list">
-            <li>Designed by a job coach with 25+ years HR experience</li>
-            <li>Used in real training groups and job preparation programs</li>
-            <li>Clear, simple tokenomics – no hidden mechanics</li>
-          </ul>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-label">Network</div>
-            <div class="stat-value">Polygon PoS · EVM compatible</div>
-          </div>
-
-          <div class="stat">
-            <div class="stat-label">Contract</div>
-            <div class="stat-value">
-              <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
-                 target="_blank">0x3EEf…5Fe1</a>
-            </div>
-            <button type="button" class="mm-btn" onclick="addJX10ToMetaMask()">🦊 Add JX10 to MetaMask</button>
-          </div>
-
-          <div class="stat">
-            <div class="stat-label">Total Supply</div>
-            <div class="stat-value">1,000,000,000 JX10</div>
-          </div>
-        </div>
-      </article>
-
-      <!-- RIGHT SIDEBAR -->
-      <aside class="card">
-        <div class="sidebar-title">Quick Access</div>
-
-        <table class="link-table">
-          <thead>
-            <tr><th>Resource</th><th>Link</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Documentation Website</td>
-              <td><a href="docs/" target="_blank">Open Docs</a></td>
-            </tr>
-
-            <tr>
-              <td>PolygonScan Contract</td>
-              <td><a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
-                     target="_blank">View on PolygonScan</a></td>
-            </tr>
-
-            <tr>
-              <td>Trade (CMC DEX)</td>
-              <td><a href="https://dex.coinmarketcap.com/token/polygon/0x3eef16cb777548dadc4e78240a50dfa72af35fe1/"
-                     target="_blank">Open on CMC DEX</a></td>
-            </tr>
-
-            <tr>
-              <td>Whitepaper (English)</td>
-              <td><a href="whitepaper/JX10_Whitepaper_English_v1.0.pdf" target="_blank">View PDF</a></td>
-            </tr>
-
-            <tr>
-              <td>Whitepaper (German)</td>
-              <td><a href="whitepaper/JX10_Whitepaper_German.pdf" target="_blank">View PDF</a></td>
-            </tr>
-
-            <tr>
-              <td>Support / Donate</td>
-              <td><a href="donate.html">Donation Page</a></td>
-            </tr>
-
-          </tbody>
-        </table>
-
-        <!-- LIVE CHART -->
-        <div style="margin-top: 1.4rem;">
-          <div style="font-weight:600; font-size:0.9rem; margin-bottom:0.5rem;">
-            Live Chart (Polygon)
-          </div>
-
-          <iframe
-            style="width:100%; height:420px; border-radius:12px; border:1px solid #e5e7eb;"
-            src="https://dexscreener.com/polygon/0x3eef16cb777548dadc4e78240a50dfa72af35fe1?embed=1">
-          </iframe>
-        </div>
-
-      </aside>
-    </section>
-
-    <!-- TEAM SECTION -->
-    <section class="card" style="margin-top:2rem;">
-      <h2 style="font-size:1.4rem; margin-bottom:0.8rem;">Team</h2>
-      <p style="font-size:0.92rem; color:#4b5563; margin-bottom:1.5rem;">
-        JobX10 is developed by a transparent, real-world team with over 25 years of experience
-        in human resources, job coaching, and education programs in Switzerland and Portugal.
-      </p>
-
-      <div style="display:flex; gap:1.2rem; align-items:flex-start; flex-wrap:wrap;">
-        <img
-          src="logo/Deni Simonetta.jpg"
-          alt="Antonio Deni Simonetta"
-          style="width:95px; height:95px; border-radius:12px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.1);"
-        />
-
-        <div>
-          <h3 style="margin:0; font-size:1.15rem; font-weight:600;">
-            Antonio Deni Simonetta
-          </h3>
-          <p style="margin:0.2rem 0 0.6rem; color:#6b7280; font-size:0.88rem;">
-            Founder & Project Lead – JobX10 (JX10)
-          </p>
-
-          <p style="font-size:0.9rem; color:#4b5563; line-height:1.45;">
-            25+ years professional experience in HR, job coaching, and placement.
-            Founder of Attenomis GmbH and active job coach in Switzerland and Portugal.
-            Responsible for the JobX10 token concept, real-world integration into training programs,
-            ecosystem development, and community strategy.
-          </p>
-
-          <div style="margin-top:0.8rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
-
-            <a
-              href="https://www.linkedin.com/in/deni-simonetta"
-              target="_blank"
-              style="color:#8247e5; font-weight:500; text-decoration:none;"
-            >
-              🔗 LinkedIn
-            </a>
-
-            <a
-              href="mailto:info@jobx10.com"
-              style="color:#8247e5; font-weight:500; text-decoration:none;"
-            >
-              ✉️ Contact
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span>JobX10 (JX10) – Utility token for real job coaching & education projects.</span>
-      <span>Founder: Antonio Deni Simonetta · <a href="https://jobx10.com" target="_blank">jobx10.com</a></span>
-    </footer>
-
-  </main>
-
-  <!-- SCRIPTS -->
-  <script>
-    async function addJX10ToMetaMask() {
-      if (!window.ethereum) {
-        alert("MetaMask wurde nicht gefunden.");
-        return;
-      }
-
-      try {
-        await window.ethereum.request({
-          method: "wallet_watchAsset",
-          params: {
-            type: "ERC20",
-            options: {
-              address: "0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1",
-              symbol: "JX10",
-              decimals: 18,
-              image: "https://jobx10-official.github.io/jobx10-token/logo/jx10.svg"
-            }
-          }
-        });
-      } catch (err) {
-        alert("Fehler beim Hinzufügen zu MetaMask.");
-      }
-    }
-
-    async function loadJX10Price() {
-      try {
-        const res = await fetch("https://api.dexscreener.com/latest/dex/tokens/0x3eef16cb777548dadc4e78240a50dfa72af35fe1");
-        const data = await res.json();
-        const price = data.pairs?.[0]?.priceUsd;
-
-        document.getElementById("jx10-price").textContent =
-          price ? "JX10 Price: $" + Number(price).toFixed(6) : "JX10 Price: unavailable";
-      } catch {
-        document.getElementById("jx10-price").textContent = "JX10 Price: unavailable";
-      }
-    }
-
-    loadJX10Price();
-    setInterval(loadJX10Price, 30000);
-  </script>
-
-</body>
-</html>
+  <div class="page">
+    <div cl
