@@ -23,21 +23,32 @@
       --shadow-soft: 0 18px 40px rgba(0,0,0,0.55);
       --max-width: 1120px;
     }
+
     * { box-sizing:border-box; margin:0; padding:0; }
+
     body {
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background: radial-gradient(circle at top,#111827 0,#020617 40%,#000 100%);
-      color:var(--text); line-height:1.6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
     }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .page { min-height:100vh; display:flex; flex-direction:column; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { min-height: 100vh; display:flex; flex-direction:column; }
     .shell { width:100%; max-width:var(--max-width); margin:0 auto; padding:16px 16px 32px; }
 
     header { padding:8px 0; }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+
     .brand { display:flex; align-items:center; gap:10px; }
-    .brand-logo { width:42px; height:42px; border-radius:12px; object-fit:cover; }
+    .brand-logo {
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      object-fit:cover;
+    }
     .brand-text-title { font-size:18px; font-weight:700; }
     .brand-text-sub { font-size:12px; color:var(--muted); }
 
@@ -45,18 +56,26 @@
     .nav-links { display:flex; gap:18px; font-size:14px; }
     .nav-links a { color:var(--muted); }
     .nav-links a:hover { color:var(--text); }
+
     .lang-switch { font-size:12px; color:var(--muted); }
     .lang-switch a { color:var(--muted); }
     .lang-switch a:hover { color:var(--accent); }
 
     .primary-btn {
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:8px 16px; border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 16px;
+      border-radius:999px;
       background:linear-gradient(135deg,#8b5cf6,#a855f7,#c4b5fd);
-      color:#111827; font-weight:600; font-size:14px;
-      border:none; cursor:pointer;
+      color:#111827;
+      font-weight:600;
+      font-size:14px;
+      border:none;
+      cursor:pointer;
       box-shadow:0 15px 35px rgba(0,0,0,0.6);
       white-space:nowrap;
+      text-decoration:none;
     }
     .primary-btn span { margin-left:6px; font-size:16px; }
     .primary-btn:hover { filter:brightness(1.05); text-decoration:none; }
@@ -64,9 +83,14 @@
     main { flex:1; padding-top:12px; padding-bottom:32px; }
 
     .hero {
-      display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);
-      gap:28px; margin-top:16px; margin-bottom:32px; align-items:stretch;
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);
+      gap:28px;
+      margin-top:16px;
+      margin-bottom:32px;
+      align-items:stretch;
     }
+
     @media (max-width:880px) {
       .hero { grid-template-columns:1fr; }
       .nav-links { display:none; }
@@ -80,60 +104,144 @@
       padding:22px 22px 20px;
       border:1px solid rgba(148,163,184,0.25);
       box-shadow:var(--shadow-soft);
-      position:relative; overflow:hidden;
+      position:relative;
+      overflow:hidden;
     }
+
     .pill {
-      display:inline-flex; align-items:center; gap:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
       padding:4px 10px 4px 4px;
       border-radius:999px;
       background:rgba(15,23,42,0.85);
       border:1px solid rgba(148,163,184,0.3);
-      font-size:11px; color:var(--muted);
+      font-size:11px;
+      color:var(--muted);
       margin-bottom:10px;
     }
     .pill-dot {
-      width:18px; height:18px; border-radius:999px;
+      width:18px;
+      height:18px;
+      border-radius:999px;
       background:radial-gradient(circle at 30% 30%,#22c55e,#16a34a 50%,#064e3b);
-      display:flex; align-items:center; justify-content:center;
-      color:#e5f9ed; font-size:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#e5f9ed;
+      font-size:14px;
     }
     .pill-strong { color:#e5e7eb; font-weight:600; }
 
-    .hero-title { font-size:clamp(26px,3vw,32px); font-weight:800; letter-spacing:.03em; margin-bottom:10px; }
+    .hero-title {
+      font-size:clamp(26px,3vw,32px);
+      font-weight:800;
+      letter-spacing:.03em;
+      margin-bottom:10px;
+    }
     .hero-highlight {
       background:linear-gradient(135deg,#c4b5fd,#a855f7,#8b5cf6);
-      -webkit-background-clip:text; color:transparent;
+      -webkit-background-clip:text;
+      color:transparent;
     }
-    .hero-sub { font-size:14px; color:var(--muted); margin-bottom:16px; max-width:520px; }
-    .hero-meta { display:flex; flex-wrap:wrap; gap:16px; margin-bottom:18px; font-size:13px; color:var(--muted); }
-    .meta-item { padding:6px 10px; border-radius:999px; border:1px solid rgba(55,65,81,0.8); background:rgba(15,23,42,0.9); }
-    .meta-label { font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-right:4px; color:#9ca3af; }
+
+    .hero-sub {
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:16px;
+      max-width:520px;
+    }
+
+    .hero-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin-bottom:18px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .meta-item {
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(55,65,81,0.8);
+      background:rgba(15,23,42,0.9);
+    }
+    .meta-label {
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin-right:4px;
+      color:#9ca3af;
+    }
 
     .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+
     .secondary-btn {
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:7px 14px; border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:7px 14px;
+      border-radius:999px;
       border:1px solid rgba(148,163,184,0.4);
       background:rgba(15,23,42,0.9);
-      font-size:13px; color:var(--muted); gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      gap:6px;
+      text-decoration:none;
     }
-    .secondary-btn:hover { border-color:rgba(248,250,252,0.4); color:#e5e7eb; text-decoration:none; }
+    .secondary-btn:hover {
+      border-color:rgba(248,250,252,0.4);
+      color:#e5e7eb;
+      text-decoration:none;
+    }
 
-    .hero-footnote { font-size:11px; color:var(--muted); margin-top:4px; }
+    .hero-footnote {
+      font-size:11px;
+      color:var(--muted);
+      margin-top:4px;
+    }
 
-    .hero-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:14px; font-size:11px; }
-    .hero-stat { border-radius:14px; border:1px solid rgba(31,41,55,0.9); background:radial-gradient(circle at top,rgba(15,23,42,0.9),rgba(15,23,42,0.96)); padding:7px 9px; }
-    .hero-stat-label { color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:2px; }
+    .hero-stats {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+      margin-top:14px;
+      font-size:11px;
+    }
+    .hero-stat {
+      border-radius:14px;
+      border:1px solid rgba(31,41,55,0.9);
+      background:radial-gradient(circle at top,rgba(15,23,42,0.9),rgba(15,23,42,0.96));
+      padding:7px 9px;
+    }
+    .hero-stat-label {
+      color:var(--muted);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:2px;
+    }
     .hero-stat-value { font-size:13px; font-weight:600; }
 
+    /* kleiner, moderner Badge – Option B */
     .hero-badge {
-      position:absolute; right:18px; top:18px;
-      padding:8px 10px; border-radius:14px;
-      border:1px solid rgba(148,163,184,0.6);
-      background:radial-gradient(circle at top left,rgba(56,189,248,0.18),rgba(15,23,42,0.98));
-      font-size:11px; color:var(--muted); max-width:170px;
+      position:absolute;
+      right:14px;
+      top:10px;
+      padding:6px 9px;
+      border-radius:12px;
+      border:1px solid rgba(148,163,184,0.5);
+      background:radial-gradient(circle at top left, rgba(168,85,247,0.22), rgba(15,23,42,0.98));
+      font-size:10px;
+      color:var(--muted);
+      max-width:150px;
     }
-    .hero-badge strong { display:block; font-size:11px; color:#e5e7eb; margin-bottom:3px; }
+    .hero-badge strong {
+      display:block;
+      font-size:10px;
+      color:#e5e7eb;
+      margin-bottom:2px;
+    }
     .hero-badge small { font-size:10px; }
 
     .panel {
@@ -142,57 +250,158 @@
       border:1px solid rgba(148,163,184,0.4);
       padding:16px 16px 14px;
       box-shadow:var(--shadow-soft);
-      display:flex; flex-direction:column; gap:10px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
-    .panel-title { font-size:13px; text-transform:uppercase; letter-spacing:.16em; color:var(--muted); margin-bottom:2px; }
+    .panel-title {
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+      margin-bottom:2px;
+    }
     .panel-heading { font-size:17px; font-weight:700; margin-bottom:4px; }
     .panel-sub { font-size:12px; color:var(--muted); margin-bottom:8px; }
     .panel-badges { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
-    .badge { font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid rgba(148,163,184,0.5); background:rgba(15,23,42,0.9); color:#e5e7eb; }
-    .badge.good { border-color:rgba(34,197,94,0.8); background:rgba(22,163,74,0.14); color:#bbf7d0; }
-    .badge.warn { border-color:rgba(234,179,8,0.8); background:rgba(202,138,4,0.18); color:#fef3c7; }
+    .badge {
+      font-size:11px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.5);
+      background:rgba(15,23,42,0.9);
+      color:#e5e7eb;
+    }
+    .badge.good {
+      border-color:rgba(34,197,94,0.8);
+      background:rgba(22,163,74,0.14);
+      color:#bbf7d0;
+    }
+    .badge.warn {
+      border-color:rgba(234,179,8,0.8);
+      background:rgba(202,138,4,0.18);
+      color:#fef3c7;
+    }
 
-    .chart-frame { border-radius:14px; overflow:hidden; border:1px solid rgba(15,23,42,0.8); background:#020617; height:260px; }
+    .chart-frame {
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(15,23,42,0.8);
+      background:#020617;
+      height:260px;
+    }
     .chart-frame iframe { border:none; width:100%; height:100%; }
 
     .section {
-      margin-top:26px; padding:18px 20px 18px; border-radius:var(--radius-lg);
+      margin-top:26px;
+      padding:18px 20px 18px;
+      border-radius:var(--radius-lg);
       background:linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.9));
       border:1px solid rgba(55,65,81,0.9);
       box-shadow:0 14px 32px rgba(0,0,0,0.45);
     }
-    .section-header { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:10px; }
-    .section-title { font-size:16px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#e5e7eb; }
+    .section-header {
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:10px;
+    }
+    .section-title {
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#e5e7eb;
+    }
     .section-kicker { font-size:12px; color:var(--muted); }
 
-    .section-grid-2 { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:18px; margin-top:6px; }
-    @media (max-width:880px) { .section-grid-2 { grid-template-columns:1fr; } }
+    .section-grid-2 {
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+      gap:18px;
+      margin-top:6px;
+    }
+    @media (max-width:880px) {
+      .section-grid-2 { grid-template-columns:1fr; }
+    }
 
-    .tokenomics-table { width:100%; border-collapse:collapse; margin-top:6px; font-size:13px; }
-    .tokenomics-table th,.tokenomics-table td { padding:6px 8px; border-bottom:1px solid rgba(31,41,55,0.9); }
-    .tokenomics-table th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.11em; color:#9ca3af; }
+    .tokenomics-table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:6px;
+      font-size:13px;
+    }
+    .tokenomics-table th,
+    .tokenomics-table td {
+      padding:6px 8px;
+      border-bottom:1px solid rgba(31,41,55,0.9);
+    }
+    .tokenomics-table th {
+      text-align:left;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      color:#9ca3af;
+    }
     .tokenomics-table tr:last-child td { border-bottom:none; }
     .tokenomics-table tr:hover td { background:rgba(15,23,42,0.95); }
 
     .label-pill {
-      display:inline-flex; padding:2px 7px; border-radius:999px;
-      border:1px solid rgba(75,85,99,0.9); font-size:11px; color:#e5e7eb;
-      background:rgba(15,23,42,0.96); margin-bottom:4px;
+      display:inline-flex;
+      padding:2px 7px;
+      border-radius:999px;
+      border:1px solid rgba(75,85,99,0.9);
+      font-size:11px;
+      color:#e5e7eb;
+      background:rgba(15,23,42,0.96);
+      margin-bottom:4px;
     }
 
-    .links-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin-top:6px; }
-    .link-card { border-radius:12px; border:1px solid rgba(55,65,81,0.9); background:rgba(15,23,42,0.96); padding:7px 9px 8px; font-size:12px; }
-    .link-card-title { font-size:12px; font-weight:600; margin-bottom:2px; color:#e5e7eb; }
-    .link-card a { font-size:12px; color:var(--accent); word-break:break-all; }
+    .links-list {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:8px;
+      margin-top:6px;
+    }
+    .link-card {
+      border-radius:12px;
+      border:1px solid rgba(55,65,81,0.9);
+      background:rgba(15,23,42,0.96);
+      padding:7px 9px 8px;
+      font-size:12px;
+    }
+    .link-card-title {
+      font-size:12px;
+      font-weight:600;
+      margin-bottom:2px;
+      color:#e5e7eb;
+    }
+    .link-card a {
+      font-size:12px;
+      color:var(--accent);
+      word-break:break-all;
+    }
 
     .steps { list-style:none; margin-top:4px; padding-left:0; }
-    .step { display:flex; gap:10px; margin-bottom:6px; align-items:flex-start; }
+    .step {
+      display:flex;
+      gap:10px;
+      margin-bottom:6px;
+      align-items:flex-start;
+    }
     .step-num {
-      width:20px; height:20px; border-radius:999px;
+      width:20px;
+      height:20px;
+      border-radius:999px;
       border:1px solid rgba(148,163,184,0.7);
-      display:flex; align-items:center; justify-content:center;
-      font-size:11px; color:#e5e7eb;
-      background:rgba(15,23,42,0.98); margin-top:2px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      color:#e5e7eb;
+      background:rgba(15,23,42,0.98);
+      margin-top:2px;
     }
     .step-body { font-size:13px; color:var(--muted); }
 
@@ -238,6 +447,7 @@
               <div class="brand-text-sub">Utility Token on Polygon (PoS)</div>
             </div>
           </div>
+
           <div class="nav-right">
             <div class="nav-links">
               <a href="#about">About</a>
@@ -250,9 +460,12 @@
             <div class="lang-switch">
               EN | <a href="de.html">DE</a>
             </div>
-            <a class="primary-btn nav-buy"
-               href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
-               target="_blank" rel="noopener noreferrer">
+            <a
+              class="primary-btn nav-buy"
+              href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Buy JX10 <span>↗</span>
             </a>
           </div>
@@ -276,20 +489,33 @@
             </p>
 
             <div class="hero-meta">
-              <div class="meta-item"><span class="meta-label">Network</span>Polygon (PoS)</div>
-              <div class="meta-item"><span class="meta-label">Type</span>ERC-20 • fixed supply</div>
-              <div class="meta-item"><span class="meta-label">Contract</span><code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code></div>
+              <div class="meta-item">
+                <span class="meta-label">Network</span>Polygon (PoS)
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Type</span>ERC-20 • fixed supply
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Contract</span>
+                <code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code>
+              </div>
             </div>
 
             <div class="hero-actions">
-              <a class="primary-btn"
-                 href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
-                 target="_blank" rel="noopener noreferrer">
+              <a
+                class="primary-btn"
+                href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Buy JX10 on QuickSwap <span>↗</span>
               </a>
-              <a class="secondary-btn"
-                 href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
-                 target="_blank" rel="noopener noreferrer">
+              <a
+                class="secondary-btn"
+                href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View on PolygonScan
               </a>
             </div>
@@ -323,13 +549,17 @@
             <div>
               <div class="panel-title">Market overview</div>
               <div class="panel-heading">JX10 • Polygon (PoS)</div>
-              <p class="panel-sub">Live DEX data from GeckoTerminal (QuickSwap JX10/USDT pool).</p>
+              <p class="panel-sub">
+                Live DEX data from GeckoTerminal (QuickSwap JX10/USDT pool).
+              </p>
             </div>
+
             <div class="panel-badges">
               <span class="badge good">Verified contract</span>
               <span class="badge">Liquidity on QuickSwap</span>
               <span class="badge warn">DYOR • Not financial advice</span>
             </div>
+
             <div class="chart-frame">
               <iframe
                 title="JX10 on GeckoTerminal"
@@ -347,6 +577,7 @@
             <h2 class="section-title">About JobX10</h2>
             <p class="section-kicker">Real-world coaching meets Web3.</p>
           </div>
+
           <div class="section-grid-2">
             <div>
               <p>
@@ -356,6 +587,7 @@
                 The token is used as a digital payment and reward layer inside the JobX10 ecosystem – for coaching sessions, courses, workshops and future on-chain tools.
               </p>
             </div>
+
             <div>
               <span class="label-pill">Core token information</span>
               <table class="tokenomics-table">
@@ -379,6 +611,7 @@
             <h2 class="section-title">Tokenomics</h2>
             <p class="section-kicker">Fixed supply and transparent allocation.</p>
           </div>
+
           <div class="section-grid-2">
             <div>
               <span class="label-pill">Allocation overview</span>
@@ -396,6 +629,7 @@
                 </tbody>
               </table>
             </div>
+
             <div>
               <p>
                 The tokenomics are designed to keep liquidity healthy, support long-term development and reward the community. No inflation, no surprise minting – the supply was fixed at deployment.
@@ -410,6 +644,7 @@
             <h2 class="section-title">How to buy JX10</h2>
             <p class="section-kicker">QuickSwap on Polygon (PoS).</p>
           </div>
+
           <div class="section-grid-2">
             <div>
               <span class="label-pill">Step-by-step</span>
@@ -430,8 +665,11 @@
                   <div class="step-num">3</div>
                   <div class="step-body">
                     Open the official QuickSwap link:<br />
-                    <a href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Buy JX10 on QuickSwap
                     </a>
                   </div>
@@ -443,24 +681,32 @@
                   </div>
                 </li>
               </ul>
+
               <p style="font-size:11px;color:var(--muted);margin-top:6px;">
                 Contract address: <code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code>
               </p>
             </div>
+
             <div>
               <span class="label-pill">MetaMask & support</span>
               <div class="links-list">
                 <div class="link-card">
                   <div class="link-card-title">MetaMask referral link</div>
-                  <a href="https://link.metamask.io/rewards?referral=ZSSCBN"
-                     target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://link.metamask.io/rewards?referral=ZSSCBN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Open MetaMask referral (ZSSCBN)
                   </a>
                 </div>
                 <div class="link-card">
                   <div class="link-card-title">PolygonScan contract</div>
-                  <a href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
-                     target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View contract on PolygonScan
                   </a>
                 </div>
@@ -469,6 +715,7 @@
                   <a href="mailto:info@jobx10.com">info@jobx10.com</a>
                 </div>
               </div>
+
               <p style="font-size:11px;color:var(--muted);margin-top:8px;">
                 This page is informational only and not financial advice. Always do your own research.
               </p>
@@ -482,6 +729,7 @@
             <h2 class="section-title">Team</h2>
             <p class="section-kicker">Real person behind the project.</p>
           </div>
+
           <div class="section-grid-2">
             <div>
               <span class="label-pill">Founder</span>
@@ -493,9 +741,11 @@
                 Based between Switzerland and Portugal, focused on practical, transparent and long-term use cases for people looking for better job opportunities and companies searching for talent.
               </p>
               <p style="font-size:13px;color:var(--muted);margin-top:4px;">
-                For partnerships, collaboration or questions, reach out via <a href="mailto:info@jobx10.com">info@jobx10.com</a> or join the Telegram community.
+                For partnerships, collaboration or questions, reach out via
+                <a href="mailto:info@jobx10.com">info@jobx10.com</a> or join the Telegram community.
               </p>
             </div>
+
             <div>
               <img
                 src="logo/deni_simonetta.jpg"
@@ -512,10 +762,15 @@
             <h2 class="section-title">Documentation & whitepaper</h2>
             <p class="section-kicker">Technical details and governance.</p>
           </div>
+
           <div class="links-list">
             <div class="link-card">
               <div class="link-card-title">GitHub repository</div>
-              <a href="https://github.com/jobx10-official/jobx10-token" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/jobx10-official/jobx10-token"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 jobx10-official/jobx10-token
               </a>
             </div>
@@ -528,6 +783,7 @@
             <h2 class="section-title">Community & links</h2>
             <p class="section-kicker">Stay connected with the JobX10 ecosystem.</p>
           </div>
+
           <div class="links-list">
             <div class="link-card">
               <div class="link-card-title">Official website</div>
@@ -539,17 +795,27 @@
             </div>
             <div class="link-card">
               <div class="link-card-title">YouTube</div>
-              <a href="https://www.youtube.com/@JX10Token" target="_blank" rel="noopener noreferrer">@JX10Token</a>
+              <a href="https://www.youtube.com/@JX10Token" target="_blank" rel="noopener noreferrer">
+                @JX10Token
+              </a>
             </div>
             <div class="link-card">
               <div class="link-card-title">LinkedIn</div>
-              <a href="https://www.linkedin.com/company/110088425" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/company/110088425"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 JobX10 on LinkedIn
               </a>
             </div>
             <div class="link-card">
               <div class="link-card-title">Facebook</div>
-              <a href="https://www.facebook.com/profile.php?id=61584395467997" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/profile.php?id=61584395467997"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 JobX10 on Facebook
               </a>
             </div>
@@ -563,13 +829,9 @@
 
       <footer>
         <div class="footer-inner">
-          <div>© JobX10 · JX10 Token on Polygon (PoS) – informational only, no investment advice.</div>
+          <div>
+            © JobX10 · JX10 Token on Polygon (PoS) – informational only, no investment advice.
+          </div>
           <div class="footer-links">
             <span>Founder: Antonio Deni Simonetta</span>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
-</body>
-</html>
+          </
