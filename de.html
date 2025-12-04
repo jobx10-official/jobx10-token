@@ -1,1 +1,889 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobX10 (JX10) – Offizieller Token auf Polygon (PoS)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="JobX10 (JX10) ist ein Utility-Token auf Polygon (PoS) für Coaching, Karriere- und Job-Dienstleistungen." />
+  <link rel="icon" href="logo/jx10.svg" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #070b1f;
+      --card: #0b1024;
+      --accent: #a855f7;
+      --accent-soft: rgba(168,85,247,0.18);
+      --text: #f4f4f5;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 40px rgba(0,0,0,0.55);
+      --max-width: 1120px;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { min-height: 100vh; display:flex; flex-direction:column; }
+    .shell { width:100%; max-width:var(--max-width); margin:0 auto; padding:16px 16px 32px; }
+
+    header { padding:8px 0; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+
+    .brand { display:flex; align-items:center; gap:10px; }
+    .brand-logo {
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      object-fit:cover;
+    }
+    .brand-text-title { font-size:18px; font-weight:700; }
+    .brand-text-sub { font-size:12px; color:var(--muted); }
+
+    .nav-right { display:flex; align-items:center; gap:14px; }
+    .nav-links { display:flex; gap:18px; font-size:14px; }
+    .nav-links a { color:var(--muted); }
+    .nav-links a:hover { color:var(--text); }
+
+    .lang-switch { font-size:12px; color:var(--muted); }
+    .lang-switch a { color:var(--muted); }
+    .lang-switch a:hover { color:var(--accent); }
+
+    .primary-btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#8b5cf6,#a855f7,#c4b5fd);
+      color:#111827;
+      font-weight:600;
+      font-size:14px;
+      border:none;
+      cursor:pointer;
+      box-shadow:0 15px 35px rgba(0,0,0,0.6);
+      white-space:nowrap;
+      text-decoration:none;
+    }
+    .primary-btn span { margin-left:6px; font-size:16px; }
+    .primary-btn:hover { filter:brightness(1.05); text-decoration:none; }
+
+    main { flex:1; padding-top:12px; padding-bottom:32px; }
+
+    .hero {
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);
+      gap:28px;
+      margin-top:16px;
+      margin-bottom:32px;
+      align-items:stretch;
+    }
+
+    @media (max-width:880px) {
+      .hero { grid-template-columns:1fr; }
+      .nav-links { display:none; }
+      .primary-btn.nav-buy { display:none; }
+      .shell { padding-inline:14px; }
+    }
+
+    .hero-card {
+      background:linear-gradient(145deg,rgba(15,23,42,0.95),rgba(15,23,42,0.88));
+      border-radius:var(--radius-xl);
+      padding:22px 22px 20px;
+      border:1px solid rgba(148,163,184,0.25);
+      box-shadow:var(--shadow-soft);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:4px 10px 4px 4px;
+      border-radius:999px;
+      background:rgba(15,23,42,0.85);
+      border:1px solid rgba(148,163,184,0.3);
+      font-size:11px;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+    .pill-dot {
+      width:18px;
+      height:18px;
+      border-radius:999px;
+      background:radial-gradient(circle at 30% 30%,#22c55e,#16a34a 50%,#064e3b);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#e5f9ed;
+      font-size:14px;
+    }
+    .pill-strong { color:#e5e7eb; font-weight:600; }
+
+    .hero-title {
+      font-size:clamp(26px,3vw,32px);
+      font-weight:800;
+      letter-spacing:.03em;
+      margin-bottom:10px;
+    }
+    .hero-highlight {
+      background:linear-gradient(135deg,#c4b5fd,#a855f7,#8b5cf6);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .hero-sub {
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:16px;
+      max-width:520px;
+    }
+
+    .hero-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin-bottom:18px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .meta-item {
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(55,65,81,0.8);
+      background:rgba(15,23,42,0.9);
+    }
+    .meta-label {
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin-right:4px;
+      color:#9ca3af;
+    }
+
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; }
+
+    .secondary-btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:7px 14px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.4);
+      background:rgba(15,23,42,0.9);
+      font-size:13px;
+      color:var(--muted);
+      gap:6px;
+      text-decoration:none;
+    }
+    .secondary-btn:hover {
+      border-color:rgba(248,250,252,0.4);
+      color:#e5e7eb;
+      text-decoration:none;
+    }
+
+    .hero-footnote {
+      font-size:11px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    .hero-stats {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+      margin-top:14px;
+      font-size:11px;
+    }
+    .hero-stat {
+      border-radius:14px;
+      border:1px solid rgba(31,41,55,0.9);
+      background:radial-gradient(circle at top,rgba(15,23,42,0.9),rgba(15,23,42,0.96));
+      padding:7px 9px;
+    }
+    .hero-stat-label {
+      color:var(--muted);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:2px;
+    }
+    .hero-stat-value { font-size:13px; font-weight:600; }
+
+    .panel {
+      background:radial-gradient(circle at top left,rgba(56,189,248,0.2),rgba(15,23,42,0.98));
+      border-radius:var(--radius-xl);
+      border:1px solid rgba(148,163,184,0.4);
+      padding:16px 16px 14px;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .panel-title {
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+      margin-bottom:2px;
+    }
+    .panel-heading { font-size:17px; font-weight:700; margin-bottom:4px; }
+    .panel-sub { font-size:12px; color:var(--muted); margin-bottom:8px; }
+    .panel-badges { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+    .badge {
+      font-size:11px;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.5);
+      background:rgba(15,23,42,0.9);
+      color:#e5e7eb;
+    }
+    .badge.good {
+      border-color:rgba(34,197,94,0.8);
+      background:rgba(22,163,74,0.14);
+      color:#bbf7d0;
+    }
+    .badge.warn {
+      border-color:rgba(234,179,8,0.8);
+      background:rgba(202,138,4,0.18);
+      color:#fef3c7;
+    }
+
+    .chart-frame {
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(15,23,42,0.8);
+      background:#020617;
+      height:260px;
+    }
+    .chart-frame iframe { border:none; width:100%; height:100%; }
+
+    .section {
+      margin-top:26px;
+      padding:18px 20px 18px;
+      border-radius:var(--radius-lg);
+      background:linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.9));
+      border:1px solid rgba(55,65,81,0.9);
+      box-shadow:0 14px 32px rgba(0,0,0,0.45);
+    }
+    .section-header {
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:10px;
+    }
+    .section-title {
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#e5e7eb;
+    }
+    .section-kicker { font-size:12px; color:var(--muted); }
+
+    .section-grid-2 {
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+      gap:18px;
+      margin-top:6px;
+    }
+    @media (max-width:880px) {
+      .section-grid-2 { grid-template-columns:1fr; }
+    }
+
+    .tokenomics-table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:6px;
+      font-size:13px;
+    }
+    .tokenomics-table th,
+    .tokenomics-table td {
+      padding:6px 8px;
+      border-bottom:1px solid rgba(31,41,55,0.9);
+    }
+    .tokenomics-table th {
+      text-align:left;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      color:#9ca3af;
+    }
+    .tokenomics-table tr:last-child td { border-bottom:none; }
+    .tokenomics-table tr:hover td { background:rgba(15,23,42,0.95); }
+
+    .label-pill {
+      display:inline-flex;
+      padding:2px 7px;
+      border-radius:999px;
+      border:1px solid rgba(75,85,99,0.9);
+      font-size:11px;
+      color:#e5e7eb;
+      background:rgba(15,23,42,0.96);
+      margin-bottom:4px;
+    }
+
+    .links-list {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:8px;
+      margin-top:6px;
+    }
+    .link-card {
+      border-radius:12px;
+      border:1px solid rgba(55,65,81,0.9);
+      background:rgba(15,23,42,0.96);
+      padding:7px 9px 8px;
+      font-size:12px;
+    }
+    .link-card-title {
+      font-size:12px;
+      font-weight:600;
+      margin-bottom:2px;
+      color:#e5e7eb;
+    }
+    .link-card a {
+      font-size:12px;
+      color:var(--accent);
+      word-break:break-all;
+    }
+
+    .steps { list-style:none; margin-top:4px; padding-left:0; }
+    .step {
+      display:flex;
+      gap:10px;
+      margin-bottom:6px;
+      align-items:flex-start;
+    }
+    .step-num {
+      width:20px;
+      height:20px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.7);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      color:#e5e7eb;
+      background:rgba(15,23,42,0.98);
+      margin-top:2px;
+    }
+    .step-body { font-size:13px; color:var(--muted); }
+
+    code {
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:12px;
+      background:rgba(15,23,42,0.9);
+      padding:2px 4px;
+      border-radius:4px;
+      border:1px solid rgba(55,65,81,0.9);
+    }
+
+    footer {
+      border-top:1px solid rgba(31,41,55,0.95);
+      background:#020617;
+      padding:14px 0 18px;
+      margin-top:24px;
+    }
+    .footer-inner {
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding-inline:16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      align-items:center;
+      font-size:11px;
+      color:#9ca3af;
+    }
+    .footer-links { display:flex; flex-wrap:wrap; gap:10px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+      <header>
+        <nav class="nav">
+          <div class="brand">
+            <img src="logo/jx10.svg" alt="JobX10 Logo" class="brand-logo" />
+            <div>
+              <div class="brand-text-title">JobX10 Token</div>
+              <div class="brand-text-sub">Utility Token auf Polygon (PoS)</div>
+            </div>
+          </div>
+
+          <div class="nav-right">
+            <div class="nav-links">
+              <a href="#about">Über</a>
+              <a href="#tokenomics">Tokenomics</a>
+              <a href="#how-to-buy">JX10 kaufen</a>
+              <a href="#team">Team</a>
+              <a href="#docs">Dokumente</a>
+              <a href="#community">Community</a>
+            </div>
+            <div class="lang-switch">
+              DE | <a href="index.html">EN</a>
+            </div>
+            <a
+              class="primary-btn nav-buy"
+              href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              JX10 kaufen <span>↗</span>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-card">
+            <div class="pill">
+              <div class="pill-dot">●</div>
+              <div><span class="pill-strong">Aktives Projekt • Utility-Token</span></div>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="hero-highlight">JobX10 (JX10)</span> – Utility-Token für Coaching & Karriere.
+            </h1>
+            <p class="hero-sub">
+              JX10 ist ein Polygon-(PoS)-ERC-20-Token für Coaching, Karriereentwicklung und Job-Dienstleistungen – mit klarer Verbindung zwischen realer Welt und Web3.
+            </p>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">Netzwerk</span>Polygon (PoS)
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Typ</span>ERC-20 • feste Anzahl
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Contract</span>
+                <code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a
+                class="primary-btn"
+                href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JX10 auf QuickSwap kaufen <span>↗</span>
+              </a>
+              <a
+                class="secondary-btn"
+                href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Auf PolygonScan ansehen
+              </a>
+              <a
+                class="secondary-btn"
+                href="https://chatgpt.com/g/g-69305aa060f4819199ee703abb858498-jx10-official-token-web3-assistant"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JX10 GPT fragen <span>🤖</span>
+              </a>
+            </div>
+
+            <p class="hero-footnote">
+              Vor jeder Transaktion immer die Contract-Adresse sorgfältig prüfen.
+            </p>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Total Supply</div>
+                <div class="hero-stat-value">1 000 000 000 JX10</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Standard</div>
+                <div class="hero-stat-value">ERC-20 • 18 Dezimalstellen</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Inflation</div>
+                <div class="hero-stat-value">Keine – feste Menge</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <div>
+              <div class="panel-title">Marktübersicht</div>
+              <div class="panel-heading">JX10 • Polygon (PoS)</div>
+              <p class="panel-sub">
+                Live-DEX-Daten von GeckoTerminal (QuickSwap-Pool JX10/USDT).
+              </p>
+            </div>
+
+            <div class="panel-badges">
+              <span class="badge good">Verifizierter Contract</span>
+              <span class="badge">Liquidität auf QuickSwap</span>
+              <span class="badge warn">DYOR • Keine Finanzberatung</span>
+            </div>
+
+            <div class="chart-frame">
+              <iframe
+                title="JX10 auf GeckoTerminal"
+                src="https://www.geckoterminal.com/de/polygon_pos/pools/0x0647c6e8f7fb5f55a5ad62b357e636770616726b?embed=1&info=1&swaps=1&chart_type=price&resolution=15m"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </aside>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Über JobX10</h2>
+            <p class="section-kicker">Reales Coaching trifft Web3.</p>
+          </div>
+
+          <div class="section-grid-2">
+            <div>
+              <p>
+                JobX10 (JX10) verbindet Coaching, Standortbestimmung und Karriereentwicklung mit Blockchain-Technologie.
+                Ziel ist es, Menschen bei ihrer beruflichen Entwicklung zu unterstützen – mit klaren, nachvollziehbaren
+                Strukturen statt Hype.
+              </p>
+              <p>
+                Der Token dient als digitale Ebene im JobX10-Ökosystem – für Coachings, Kurse, Workshops und künftige
+                Web3-Tools rund um Job & Karriere.
+              </p>
+            </div>
+
+            <div>
+              <span class="label-pill">Kern-Infos zum Token</span>
+              <table class="tokenomics-table">
+                <tbody>
+                  <tr><th>Name</th><td>JobX10</td></tr>
+                  <tr><th>Symbol</th><td>JX10</td></tr>
+                  <tr><th>Netzwerk</th><td>Polygon (PoS)</td></tr>
+                  <tr><th>Standard</th><td>ERC-20 • 18 Dezimalstellen</td></tr>
+                  <tr><th>Total Supply</th><td>1 000 000 000 JX10</td></tr>
+                  <tr><th>Contract</th><td><code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code></td></tr>
+                  <tr><th>Proxy / Mint</th><td>Kein Proxy, keine versteckten Mint-Funktionen.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOKENOMICS -->
+        <section id="tokenomics" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Tokenomics</h2>
+            <p class="section-kicker">Feste Menge und transparente Verteilung.</p>
+          </div>
+
+          <div class="section-grid-2">
+            <div>
+              <span class="label-pill">Verteilungsübersicht</span>
+              <table class="tokenomics-table">
+                <thead>
+                  <tr><th>Bereich</th><th>%</th><th>Tokens</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Liquiditätspool</td><td>55 %</td><td>550 000 000</td></tr>
+                  <tr><td>Founder</td><td>10 %</td><td>100 000 000</td></tr>
+                  <tr><td>Ecosystem-Rewards</td><td>15 %</td><td>150 000 000</td></tr>
+                  <tr><td>Entwicklung</td><td>10 %</td><td>100 000 000</td></tr>
+                  <tr><td>Marketing</td><td>5 %</td><td>50 000 000</td></tr>
+                  <tr><td>Treasury / Reserve</td><td>5 %</td><td>50 000 000</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <p>
+                Die Tokenomics sind so aufgebaut, dass genügend Liquidität vorhanden ist, Entwicklung möglich bleibt
+                und die Community langfristig profitieren kann. Es gibt keine Inflation und kein nachträgliches Minting –
+                die maximale Menge wurde beim Deployment festgelegt.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW TO BUY -->
+        <section id="how-to-buy" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Wie kaufe ich JX10?</h2>
+            <p class="section-kicker">Über QuickSwap auf Polygon (PoS).</p>
+          </div>
+
+          <div class="section-grid-2">
+            <div>
+              <span class="label-pill">Schritt-für-Schritt</span>
+              <ul class="steps">
+                <li class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    Eine Web3-Wallet wie <strong>MetaMask</strong> installieren und das Netzwerk
+                    <strong>Polygon (PoS)</strong> hinzufügen.
+                  </div>
+                </li>
+                <li class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    Wallet mit <strong>USDT auf Polygon</strong> (oder anderen unterstützten Tokens) von
+                    einer Börse oder Bridge aufladen.
+                  </div>
+                </li>
+                <li class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    Den offiziellen QuickSwap-Link öffnen:<br />
+                    <a
+                      href="https://dapp.quickswap.exchange/swap/best/ETH/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1?chainId=137"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      JX10 auf QuickSwap kaufen
+                    </a>
+                  </div>
+                </li>
+                <li class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    Wallet verbinden, JX10 über die Contract-Adresse auswählen und den Swap bestätigen.
+                    JX10 erscheint danach in der Wallet (Token bei Bedarf manuell hinzufügen).
+                  </div>
+                </li>
+              </ul>
+
+              <p style="font-size:11px;color:var(--muted);margin-top:6px;">
+                Contract-Adresse: <code>0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1</code>
+              </p>
+            </div>
+
+            <div>
+              <span class="label-pill">MetaMask & Support</span>
+              <div class="links-list">
+                <div class="link-card">
+                  <div class="link-card-title">MetaMask-Referral-Link</div>
+                  <a
+                    href="https://link.metamask.io/rewards?referral=ZSSCBN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    MetaMask-Referral öffnen (ZSSCBN)
+                  </a>
+                </div>
+                <div class="link-card">
+                  <div class="link-card-title">PolygonScan-Contract</div>
+                  <a
+                    href="https://polygonscan.com/token/0x3EEf16cb777548DaDC4E78240A50dFA72af35Fe1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contract auf PolygonScan ansehen
+                  </a>
+                </div>
+                <div class="link-card">
+                  <div class="link-card-title">Kontakt</div>
+                  <a href="mailto:info@jobx10.com">info@jobx10.com</a>
+                </div>
+              </div>
+
+              <p style="font-size:11px;color:var(--muted);margin-top:8px;">
+                Diese Seite ist rein informativ und stellt keine Anlageempfehlung dar. Immer eigene
+                Recherchen machen (DYOR).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Team</h2>
+            <p class="section-kicker">Eine reale Person hinter dem Projekt.</p>
+          </div>
+
+          <div class="section-grid-2">
+            <div>
+              <span class="label-pill">Gründer</span>
+              <h3 style="margin-top:4px;font-size:15px;font-weight:700;">Antonio Deni Simonetta</h3>
+              <p style="font-size:13px;color:var(--muted);margin-top:4px;">
+                Über 25 Jahre Erfahrung im HR-Bereich, Recruiting, Coaching und Jobvermittlung. JobX10
+                ist als Brücke gedacht zwischen klassischem Coaching und modernen Web3-Möglichkeiten – mit
+                Fokus auf echte Menschen statt anonyme Spekulation.
+              </p>
+              <p style="font-size:13px;color:var(--muted);margin-top:4px;">
+                Unterwegs zwischen Schweiz und Portugal, mit dem Ziel, praxisnahe und transparente Lösungen
+                für Jobsuchende und Unternehmen zu bieten.
+              </p>
+              <p style="font-size:13px;color:var(--muted);margin-top:4px;">
+                Für Kooperationen, Fragen oder Medienanfragen:
+                <a href="mailto:info@jobx10.com">info@jobx10.com</a> oder der Telegram-Community beitreten.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src="logo/deni_simonetta.jpg"
+                alt="Antonio Deni Simonetta"
+                style="max-width:280px;width:100%;border-radius:12px;box-shadow:var(--shadow-soft);"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- DOCS -->
+        <section id="docs" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Dokumentation & Whitepaper</h2>
+            <p class="section-kicker">Technische Details und Hintergrund.</p>
+          </div>
+
+          <!-- Whitepaper Buttons -->
+          <div class="hero-actions" style="margin-top:4px;margin-bottom:10px;">
+            <a
+              class="secondary-btn"
+              href="whitepaper/JX10_Whitepaper_English_v1.0.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Whitepaper Englisch (PDF)
+            </a>
+            <a
+              class="secondary-btn"
+              href="whitepaper/JX10_Whitepaper_German.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Whitepaper Deutsch (PDF)
+            </a>
+          </div>
+
+          <div class="links-list">
+            <div class="link-card">
+              <div class="link-card-title">GitHub-Repository</div>
+              <a
+                href="https://github.com/jobx10-official/jobx10-token"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                jobx10-official/jobx10-token
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">Whitepaper Englisch</div>
+              <a
+                href="whitepaper/JX10_Whitepaper_English_v1.0.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JX10 Whitepaper (EN) herunterladen
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">Whitepaper Deutsch</div>
+              <a
+                href="whitepaper/JX10_Whitepaper_German.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JX10 Whitepaper (DE) herunterladen
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section id="community" class="section">
+          <div class="section-header">
+            <h2 class="section-title">Community & Links</h2>
+            <p class="section-kicker">Mit dem JobX10-Ökosystem verbunden bleiben.</p>
+          </div>
+
+          <div class="links-list">
+            <div class="link-card">
+              <div class="link-card-title">Offizielle Website</div>
+              <a href="https://jobx10.com" target="_blank" rel="noopener noreferrer">jobx10.com</a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">Telegram</div>
+              <a href="https://t.me/jobx10" target="_blank" rel="noopener noreferrer">t.me/jobx10</a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">YouTube</div>
+              <a href="https://www.youtube.com/@JX10Token" target="_blank" rel="noopener noreferrer">
+                @JX10Token
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">LinkedIn</div>
+              <a
+                href="https://www.linkedin.com/company/110088425"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JobX10 auf LinkedIn
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">Facebook</div>
+              <a
+                href="https://www.facebook.com/profile.php?id=61584395467997"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JobX10 auf Facebook
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">JX10 GPT-Assistent</div>
+              <a
+                href="https://chatgpt.com/g/g-69305aa060f4819199ee703abb858498-jx10-official-token-web3-assistant"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JX10 Web3-Assistent fragen
+              </a>
+            </div>
+            <div class="link-card">
+              <div class="link-card-title">E-Mail</div>
+              <a href="mailto:info@jobx10.com">info@jobx10.com</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <div>
+            © JobX10 · JX10 Token auf Polygon (PoS) – nur zu Informationszwecken, keine Anlageberatung.
+          </div>
+          <div class="footer-links">
+            <a href="legal.html">Impressum</a>
+            <span style="margin: 0 6px;">|</span>
+            <a href="datenschutz.html">Datenschutz</a>
+            <span>· Founder: Antonio Deni Simonetta</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
 
